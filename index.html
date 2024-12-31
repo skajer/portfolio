@@ -3,29 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moje Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Twoje Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="navbar">
-                <div class="logo">
-                    <a href="#">Moje Logo</a>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-menu">
+                <a href="#" class="nav-link active" data-key="home">Strona główna</a>
+                <a href="#portfolio" class="nav-link" data-key="portfolio">Portfolio</a>
+                <a href="#about" class="nav-link" data-key="about">O mnie</a>
+                <a href="#opinie" class="nav-link" data-key="testimonials">Opinie</a>
+                <a href="#kontakt" class="nav-link" data-key="contact">Kontakt</a>
+            </div>
+            <div class="mobile-nav">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="pl">PL</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="social-links">
-                    <a href="https://github.com/twoje-konto">GitHub</a>
+                <button class="menu-toggle" aria-label="Menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-left">
+                <h1>Cześć, jestem <br>Kacper<span class="cursor">|</span></h1>
+                <p class="subtitle">Developer | Biznesmen | Freelancer</p>
+                <div class="hero-links">
+                    <a href="#kontakt" class="cta-button">Umów się na spotkanie 💻</a>
+                    <a href="https://github.com/skajer" class="social-link">GitHub</a>
                 </div>
             </div>
-        </nav>
-    </header>
+            <div class="hero-right">
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-tabs">
+                            <span class="tab vscode">vscode</span>
+                            <span class="tab branch">main</span>
+                            <span class="tab git">$!</span>
+                            <span class="tab via">via</span>
+                            <span class="tab version">v16.15.1</span>
+                        </div>
+                    </div>
+                    <div class="terminal-content">
+                        <div class="command-line">
+                            <span class="prompt">❯</span>
+                            <span class="command typing">git fetch</span>
+                        </div>
+                        <div class="command-line">
+                            <span class="prompt">❯</span>
+                            <span class="command typing-2">npm install</span>
+                        </div>
+                        <div class="command-line">
+                            <span class="prompt">❯</span>
+                            <span class="command typing-3">npm run dev</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="section-header">
+            <h2>Portfolio</h2>
+            <p class="section-description">Wybrane projekty, które zrealizowałem</p>
+        </div>
+        
+        <div class="portfolio-grid">
+            <article class="portfolio-item">
+                <div class="portfolio-content">
+                    <h3>System automatyzacji domu</h3>
+                    <p>Kompleksowy system zarządzania inteligentnym domem oparty o Home Assistant</p>
+                    <div class="tech-stack">
+                        <span>Home Assistant</span>
+                        <span>Node-RED</span>
+                        <span>MQTT</span>
+                    </div>
+                    <div class="portfolio-links">
+                        <a href="#" class="portfolio-link">Szczegóły projektu →</a>
+                        <a href="#" class="portfolio-link">Demo</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="portfolio-item">
+                <div class="portfolio-content">
+                    <h3>Aplikacja IoT</h3>
+                    <p>System monitorowania i kontroli urządzeń przemysłowych</p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>SQLite</span>
+                        <span>REST API</span>
+                    </div>
+                    <div class="portfolio-links">
+                        <a href="#" class="portfolio-link">Szczegóły projektu →</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>O mnie</h2>
+                <p class="about-description">
+                    Jestem programistą specjalizującym się w tworzeniu nowoczesnych aplikacji webowych i automatyzacji procesów. Moje podejście skupia się na dostarczaniu efektywnych i skalowalnych rozwiązań.
+                </p>
+                <div class="experience">
+                    <div class="experience-item">
+                        <span class="number">4+</span>
+                        <span class="label">Lata doświadczenia</span>
+                    </div>
+                    <div class="experience-item">
+                        <span class="number">90+</span>
+                        <span class="label">Zrealizowanych projektów</span>
+                    </div>
+                    <div class="experience-item">
+                        <span class="number">60+</span>
+                        <span class="label">Zadowolonych klientów</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="opinie">
+        <div class="testimonials-content">
+            <div class="section-header">
+                <h2>Co mówią klienci</h2>
+                <p class="section-description">Opinie osób, z którymi miałem przyjemność współpracować</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <article class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            "Profesjonalne podejście i świetna komunikacja. Projekt został wykonany zgodnie z założeniami i w terminie. Polecam!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Jan Kowalski</h4>
+                                <p>CEO, TechFirm</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            "Świetna współpraca i doskonałe zrozumienie potrzeb klienta. Efekt końcowy przeszedł nasze oczekiwania."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Anna Nowak</h4>
+                                <p>Marketing Manager, StartupXYZ</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            "Innowacyjne podejście do projektu i bardzo dobra znajomość najnowszych technologii. Zdecydowanie polecam!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Piotr Wiśniewski</h4>
+                                <p>CTO, InnoTech</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-me" id="why-me">
+        <div class="why-me-content">
+            <h2>Dlaczego ja?</h2>
+            <div class="why-me-grid">
+                <div class="why-me-item">
+                    <h3>01</h3>
+                    <h4>Indywidualne podejście</h4>
+                    <p>Każdy projekt traktuję jako unikalne wyzwanie, dostosowując rozwiązania do konkretnych potrzeb klienta.</p>
+                </div>
+                
+                <div class="why-me-item">
+                    <h3>02</h3>
+                    <h4>Nowoczesne technologie</h4>
+                    <p>Wykorzystuję najnowsze narzędzia i frameworki, zapewniając wydajność i przyszłościowe rozwiązania.</p>
+                </div>
+                
+                <div class="why-me-item">
+                    <h3>03</h3>
+                    <h4>Terminowość</h4>
+                    <p>Projekty realizuję zgodnie z ustalonym harmonogramem, zapewniając regularną komunikację i aktualizacje.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="kontakt">
+        <div class="contact-content">
+            <div class="contact-text text-center">
+                <h2>Umów spotkanie</h2>
+                <p class="contact-description">
+                    Porozmawiajmy o Twoim projekcie. Wypełnij formularz, a skontaktuję się z Tobą w ciągu 24 godzin.
+                </p>
+            </div>
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required>
+                    <label for="name">Imię i nazwisko</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" required></textarea>
+                    <label for="message">Wiadomość</label>
+                </div>
+                <button type="submit" class="submit-btn">Wyślij wiadomość →</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <p class="copyright">© 2024 Kacper Stefański. Wszystkie prawa zastrzeżone.</p>
+            </div>
+            <div class="footer-right">
+                <div class="social-links">
+                    <a href="https://github.com/skajer" target="_blank" class="social-link">GitHub</a>
+                    <a href="https://linkedin.com/in/kacperskajer" target="_blank" class="social-link">LinkedIn</a>
+                    <a href="mailto:kontakt@kacperskajer.pl" class="social-link">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
+
 </body>
 </html>
