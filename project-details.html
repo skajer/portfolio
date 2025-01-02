@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System automatyzacji domu - Szczegóły projektu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-details.css">
+    <!-- Dodaj highlight.js dla podświetlania składni kodu -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <!-- Nawigacja (taka sama jak w głównym layoucie) -->
+    <nav class="navbar">
+        <!-- ... (kod nawigacji) ... -->
+    </nav>
+
+    <main class="project-details">
+        <!-- Hero sekcja projektu -->
+        <section class="project-hero">
+            <div class="project-header">
+                <h1>System automatyzacji domu</h1>
+                <p class="project-subtitle">Kompleksowy system zarządzania inteligentnym domem oparty o Home Assistant</p>
+                <div class="project-tags">
+                    <span class="tag">Home Assistant</span>
+                    <span class="tag">Node-RED</span>
+                    <span class="tag">MQTT</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Przegląd projektu -->
+        <section class="project-overview">
+            <h2>Przegląd projektu</h2>
+            <div class="overview-grid">
+                <div class="overview-item">
+                    <h3>Cel projektu</h3>
+                    <p>Stworzenie intuicyjnego i niezawodnego systemu automatyzacji domu, który pozwala na pełną kontrolę nad oświetleniem, ogrzewaniem, bezpieczeństwem i innymi aspektami życia domowego.</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Technologie</h3>
+                    <ul class="tech-list">
+                        <li>Home Assistant</li>
+                        <li>Node-RED</li>
+                        <li>MQTT</li>
+                        <li>ESP8266/ESP32</li>
+                        <li>Docker</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Główne funkcje -->
+        <section class="project-features">
+            <h2>Główne funkcje</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Inteligentne oświetlenie</h3>
+                    <p>Automatyczne sterowanie oświetleniem w zależności od pory dnia i obecności domowników.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Kontrola klimatu</h3>
+                    <p>Zarządzanie ogrzewaniem i klimatyzacją z uwzględnieniem preferencji użytkowników.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>System bezpieczeństwa</h3>
+                    <p>Monitoring, czujniki ruchu i automatyczne powiadomienia o zdarzeniach.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Przykładowy kod -->
+        <section class="project-code">
+            <h2>Implementacja</h2>
+            <div class="code-example">
+                <h3>Konfiguracja automatyzacji w Home Assistant</h3>
+                <pre><code class="yaml">
+automation:
+  - alias: "Włącz światło przy wejściu"
+    trigger:
+      platform: state
+      entity_id: binary_sensor.motion_sensor
+      to: 'on'
+    condition:
+      condition: sun
+      after: sunset
+    action:
+      service: light.turn_on
+      target:
+        entity_id: light.entrance
+      data:
+        brightness_pct: 100
+        transition: 2
+                </code></pre>
+            </div>
+        </section>
+
+        <!-- Galeria -->
+        <section class="project-gallery">
+            <h2>Galeria</h2>
+            <div class="gallery-grid">
+                <img src="img/dashboard.png" alt="Dashboard Home Assistant">
+                <img src="img/node-red-flow.png" alt="Flow w Node-RED">
+                <img src="img/hardware-setup.png" alt="Konfiguracja sprzętowa">
+            </div>
+        </section>
+
+        <!-- Wnioski -->
+        <section class="project-conclusions">
+            <h2>Wnioski i rezultaty</h2>
+            <div class="conclusions-content">
+                <p>Projekt znacząco poprawił komfort życia mieszkańców poprzez:</p>
+                <ul>
+                    <li>Redukcję zużycia energii o 30%</li>
+                    <li>Automatyzację codziennych zadań</li>
+                    <li>Zwiększenie bezpieczeństwa</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Demo -->
+        <section class="project-demo">
+            <h2>Demo</h2>
+            <div class="demo-content">
+                <p>Zobacz system w akcji:</p>
+                <a href="#" class="demo-btn">Wypróbuj demo →</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="script.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html> 

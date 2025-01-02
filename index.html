@@ -75,173 +75,127 @@
         </div>
     </section>
 
-    <section class="portfolio" id="portfolio">
-        <div class="section-header">
-            <h2>Portfolio</h2>
-            <p class="section-description">Wybrane projekty, które zrealizowałem</p>
-        </div>
-        
-        <div class="portfolio-grid">
-            <article class="portfolio-item">
-                <div class="portfolio-content">
+    <section id="portfolio" class="portfolio">
+        <h2>Portfolio</h2>
+        <div class="projects-grid">
+            <a href="project-details.html" class="project-card">
+                <div class="project-content">
                     <h3>System automatyzacji domu</h3>
                     <p>Kompleksowy system zarządzania inteligentnym domem oparty o Home Assistant</p>
-                    <div class="tech-stack">
-                        <span>Home Assistant</span>
-                        <span>Node-RED</span>
-                        <span>MQTT</span>
+                    <div class="project-tags">
+                        <span class="tag">Home Assistant</span>
+                        <span class="tag">Node-RED</span>
+                        <span class="tag">MQTT</span>
                     </div>
-                    <div class="portfolio-links">
-                        <a href="#" class="portfolio-link">Szczegóły projektu →</a>
-                        <a href="#" class="portfolio-link">Demo</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="portfolio-item">
-                <div class="portfolio-content">
-                    <h3>Aplikacja IoT</h3>
-                    <p>System monitorowania i kontroli urządzeń przemysłowych</p>
-                    <div class="tech-stack">
-                        <span>Python</span>
-                        <span>SQLite</span>
-                        <span>REST API</span>
-                    </div>
-                    <div class="portfolio-links">
-                        <a href="#" class="portfolio-link">Szczegóły projektu →</a>
+                    <div class="project-links">
+                        <span class="project-link">Szczegóły projektu →</span>
+                        <span class="project-link">Demo</span>
                     </div>
                 </div>
-            </article>
+            </a>
+            <!-- Więcej projektów... -->
         </div>
     </section>
 
-    <section class="about" id="about">
-        <div class="about-content">
-            <div class="about-text">
-                <h2>O mnie</h2>
-                <p class="about-description">
-                    Jestem programistą specjalizującym się w tworzeniu nowoczesnych aplikacji webowych i automatyzacji procesów. Moje podejście skupia się na dostarczaniu efektywnych i skalowalnych rozwiązań.
-                </p>
-                <div class="experience">
-                    <div class="experience-item">
-                        <span class="number">4+</span>
-                        <span class="label">Lata doświadczenia</span>
-                    </div>
-                    <div class="experience-item">
-                        <span class="number">90+</span>
-                        <span class="label">Zrealizowanych projektów</span>
-                    </div>
-                    <div class="experience-item">
-                        <span class="number">60+</span>
-                        <span class="label">Zadowolonych klientów</span>
-                    </div>
+    <section id="about" class="about">
+        <h2>O mnie</h2>
+        <p>Jestem programistą specjalizującym się w tworzeniu nowoczesnych aplikacji webowych i automatyzacji procesów. Moje podejście skupia się na dostarczaniu efektywnych i skalowalnych rozwiązań.</p>
+        
+        <div class="stats">
+            <div class="stat">
+                <span class="stat-number">4+</span>
+                <span class="stat-label" data-stat="years">Lata doświadczenia</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">90+</span>
+                <span class="stat-label" data-stat="projects">Zrealizowanych projektów</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">60+</span>
+                <span class="stat-label" data-stat="clients">Zadowolonych klientów</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="opinie" class="testimonials">
+        <h2>Co mówią klienci</h2>
+        <p class="section-subtitle">Opinie osób, z którymi miałem przyjemność współpracować</p>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Profesjonalne podejście i świetna komunikacja. Projekt został wykonany zgodnie z założeniami i w terminie. Polecam!"</p>
+                <div class="testimonial-author">
+                    <h3>Jan Kowalski</h3>
+                    <p>CEO, TechFirm</p>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Świetna współpraca i doskonałe zrozumienie potrzeb klienta. Efekt końcowy przeszedł nasze oczekiwania."</p>
+                <div class="testimonial-author">
+                    <h3>Anna Nowak</h3>
+                    <p>Marketing Manager, StartupXYZ</p>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Innowacyjne podejście do projektu i bardzo dobra znajomość najnowszych technologii. Zdecydowanie polecam!"</p>
+                <div class="testimonial-author">
+                    <h3>Piotr Wiśniewski</h3>
+                    <p>CTO, InnoTech</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="testimonials" id="opinie">
-        <div class="testimonials-content">
-            <div class="section-header">
-                <h2>Co mówią klienci</h2>
-                <p class="section-description">Opinie osób, z którymi miałem przyjemność współpracować</p>
+    <section id="why-me" class="why-me">
+        <h2>Dlaczego ja?</h2>
+        
+        <div class="features-grid">
+            <div class="feature">
+                <div class="feature-number">01</div>
+                <h3>Indywidualne podejście</h3>
+                <p>Każdy projekt traktuję jako unikalne wyzwanie, dostosowując rozwiązania do konkretnych potrzeb klienta.</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-number">02</div>
+                <h3>Nowoczesne technologie</h3>
+                <p>Wykorzystuję najnowsze narzędzia i frameworki, zapewniając wydajność i przyszłościowe rozwiązania.</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-number">03</div>
+                <h3>Terminowość</h3>
+                <p>Projekty realizuję zgodnie z ustalonym harmonogramem, zapewniając regularną komunikację i aktualizacje.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="contact">
+        <h2>Umów spotkanie</h2>
+        <p class="section-subtitle">Porozmawiajmy o Twoim projekcie. Wypełnij formularz, a skontaktuję się z Tobą w ciągu 24 godzin.</p>
+        
+        <form id="contact-form" class="contact-form">
+            <div class="form-group">
+                <label for="name">Imię i nazwisko</label>
+                <input type="text" id="name" name="name" required>
             </div>
             
-            <div class="testimonials-grid">
-                <article class="testimonial-item">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">
-                            "Profesjonalne podejście i świetna komunikacja. Projekt został wykonany zgodnie z założeniami i w terminie. Polecam!"
-                        </p>
-                        <div class="testimonial-author">
-                            <div class="author-info">
-                                <h4>Jan Kowalski</h4>
-                                <p>CEO, TechFirm</p>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="testimonial-item">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">
-                            "Świetna współpraca i doskonałe zrozumienie potrzeb klienta. Efekt końcowy przeszedł nasze oczekiwania."
-                        </p>
-                        <div class="testimonial-author">
-                            <div class="author-info">
-                                <h4>Anna Nowak</h4>
-                                <p>Marketing Manager, StartupXYZ</p>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="testimonial-item">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">
-                            "Innowacyjne podejście do projektu i bardzo dobra znajomość najnowszych technologii. Zdecydowanie polecam!"
-                        </p>
-                        <div class="testimonial-author">
-                            <div class="author-info">
-                                <h4>Piotr Wiśniewski</h4>
-                                <p>CTO, InnoTech</p>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
             </div>
-        </div>
-    </section>
-
-    <section class="why-me" id="why-me">
-        <div class="why-me-content">
-            <h2>Dlaczego ja?</h2>
-            <div class="why-me-grid">
-                <div class="why-me-item">
-                    <h3>01</h3>
-                    <h4>Indywidualne podejście</h4>
-                    <p>Każdy projekt traktuję jako unikalne wyzwanie, dostosowując rozwiązania do konkretnych potrzeb klienta.</p>
-                </div>
-                
-                <div class="why-me-item">
-                    <h3>02</h3>
-                    <h4>Nowoczesne technologie</h4>
-                    <p>Wykorzystuję najnowsze narzędzia i frameworki, zapewniając wydajność i przyszłościowe rozwiązania.</p>
-                </div>
-                
-                <div class="why-me-item">
-                    <h3>03</h3>
-                    <h4>Terminowość</h4>
-                    <p>Projekty realizuję zgodnie z ustalonym harmonogramem, zapewniając regularną komunikację i aktualizacje.</p>
-                </div>
+            
+            <div class="form-group">
+                <label for="message">Wiadomość</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
             </div>
-        </div>
-    </section>
-
-    <section class="contact" id="kontakt">
-        <div class="contact-content">
-            <div class="contact-text text-center">
-                <h2>Umów spotkanie</h2>
-                <p class="contact-description">
-                    Porozmawiajmy o Twoim projekcie. Wypełnij formularz, a skontaktuję się z Tobą w ciągu 24 godzin.
-                </p>
-            </div>
-            <form class="contact-form">
-                <div class="form-group">
-                    <input type="text" id="name" name="name" required>
-                    <label for="name">Imię i nazwisko</label>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="email" required>
-                    <label for="email">Email</label>
-                </div>
-                <div class="form-group">
-                    <textarea id="message" name="message" required></textarea>
-                    <label for="message">Wiadomość</label>
-                </div>
-                <button type="submit" class="submit-btn">Wyślij wiadomość →</button>
-            </form>
-        </div>
+            
+            <button type="submit" class="submit-btn">
+                Wyślij wiadomość →
+            </button>
+        </form>
     </section>
 
     <footer class="footer">
