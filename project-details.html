@@ -19,12 +19,12 @@
         <!-- Hero sekcja projektu -->
         <section class="project-hero">
             <div class="project-header">
-                <h1>System automatyzacji domu</h1>
-                <p class="project-subtitle">Kompleksowy system zarządzania inteligentnym domem oparty o Home Assistant</p>
+                <h1>System automatyzacji odciągu wiórów</h1>
+                <p class="project-subtitle">Inteligentny system sterowania przepustnicami w systemie odciągu wiórów</p>
                 <div class="project-tags">
-                    <span class="tag">Home Assistant</span>
+                    <span class="tag">Automatyka</span>
                     <span class="tag">Node-RED</span>
-                    <span class="tag">MQTT</span>
+                    <span class="tag">RPI</span>
                 </div>
             </div>
         </section>
@@ -35,17 +35,37 @@
             <div class="overview-grid">
                 <div class="overview-item">
                     <h3>Cel projektu</h3>
-                    <p>Stworzenie intuicyjnego i niezawodnego systemu automatyzacji domu, który pozwala na pełną kontrolę nad oświetleniem, ogrzewaniem, bezpieczeństwem i innymi aspektami życia domowego.</p>
+                    <p>Stworzenie zautomatyzowanego systemu sterowania przepustnicami (blastgates) w systemie odciągu wiórów, 
+                       który automatycznie zarządza przepływem powietrza w zależności od stanu maszyn (piła, strugarka).</p>
                 </div>
                 <div class="overview-item">
-                    <h3>Technologie</h3>
-                    <ul class="tech-list">
-                        <li>Home Assistant</li>
-                        <li>Node-RED</li>
-                        <li>MQTT</li>
-                        <li>ESP8266/ESP32</li>
-                        <li>Docker</li>
-                    </ul>
+                    <h3>Komponenty systemu</h3>
+                    <div class="components-grid">
+                        <div class="component-card">
+                            <h4>Sterownik główny</h4>
+                            <p>Raspberry Pi 4 z Node-RED do zarządzania całym systemem</p>
+                        </div>
+                        <div class="component-card">
+                            <h4>Przepustnice</h4>
+                            <p>3 automatyczne przepustnice z siłownikami 24V</p>
+                        </div>
+                        <div class="component-card">
+                            <h4>Czujniki</h4>
+                            <p>Sensory prądu do wykrywania stanu maszyn</p>
+                        </div>
+                        <div class="component-card">
+                            <h4>Interfejs</h4>
+                            <p>Panel sterowania z wyświetlaczem LCD i przyciskami</p>
+                        </div>
+                        <div class="component-card">
+                            <h4>Zasilanie</h4>
+                            <p>Redundantny system zasilania z UPS</p>
+                        </div>
+                        <div class="component-card">
+                            <h4>Bezpieczeństwo</h4>
+                            <p>System zabezpieczeń i monitoring ciśnienia</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -55,17 +75,26 @@
             <h2>Główne funkcje</h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <h3>Inteligentne oświetlenie</h3>
-                    <p>Automatyczne sterowanie oświetleniem w zależności od pory dnia i obecności domowników.</p>
+                    <h3>Automatyczne sterowanie</h3>
+                    <p>System automatycznie wykrywa stan maszyn i dostosowuje przepustnice.</p>
                 </div>
                 <div class="feature-card">
-                    <h3>Kontrola klimatu</h3>
-                    <p>Zarządzanie ogrzewaniem i klimatyzacją z uwzględnieniem preferencji użytkowników.</p>
+                    <h3>Sterowanie ręczne</h3>
+                    <p>Możliwość manualnego sterowania przepustnicami poprzez przyciski.</p>
                 </div>
                 <div class="feature-card">
-                    <h3>System bezpieczeństwa</h3>
-                    <p>Monitoring, czujniki ruchu i automatyczne powiadomienia o zdarzeniach.</p>
+                    <h3>Opóźnienia bezpieczeństwa</h3>
+                    <p>Wbudowane opóźnienia czasowe zapewniające bezpieczne przełączanie stanów.</p>
                 </div>
+            </div>
+        </section>
+
+        <section class="project-diagram">
+            <h2>Diagram przepływu</h2>
+            <div class="diagram-content">
+                <img src="PROJECTS/blastgate-automation/images/Blastgate-Mindmap-V4.jpg" alt="Diagram przepływu systemu automatyzacji">
+                <a href="PROJECTS/blastgate-automation/images/Blastgate-Mindmap-V4.jpg" target="_blank" class="diagram-fullscreen">Zobacz pełny diagram</a>
+                <p>Diagram przedstawia logikę działania systemu, włączając wszystkie stany i przejścia między nimi.</p>
             </div>
         </section>
 
@@ -73,24 +102,67 @@
         <section class="project-code">
             <h2>Implementacja</h2>
             <div class="code-example">
-                <h3>Konfiguracja automatyzacji w Home Assistant</h3>
-                <pre><code class="yaml">
-automation:
-  - alias: "Włącz światło przy wejściu"
-    trigger:
-      platform: state
-      entity_id: binary_sensor.motion_sensor
-      to: 'on'
-    condition:
-      condition: sun
-      after: sunset
-    action:
-      service: light.turn_on
-      target:
-        entity_id: light.entrance
-      data:
-        brightness_pct: 100
-        transition: 2
+                <h3>Logika sterowania w Node-RED</h3>
+                <pre><code class="javascript">
+// Funkcja określająca stan systemu
+function determineSystemState(msg) {
+    const saw = msg.payload.saw;         // stan piły
+    const planer = msg.payload.planer;   // stan strugarki
+    
+    if (saw && planer) return 1;         // obie maszyny włączone
+    if (saw && !planer) return 2;        // tylko piła
+    if (!saw && planer) return 3;        // tylko strugarka
+    if (!saw && !planer) return 4;       // okres po-uruchomieniowy
+    return 0;                            // standby
+}
+
+// Funkcja sterująca przepustnicami
+function controlBlastgates(state) {
+    switch(state) {
+        case 1: // Piła + Strugarka
+            return {
+                gate1: true,
+                gate2: true,
+                gate3: false
+            };
+        case 2: // Tylko piła
+            return {
+                gate1: true,
+                gate2: false,
+                gate3: false
+            };
+        case 3: // Tylko strugarka
+            return {
+                gate1: false,
+                gate2: true,
+                gate3: false
+            };
+        default: // Standby lub okres po-uruchomieniowy
+            return {
+                gate1: false,
+                gate2: false,
+                gate3: false
+            };
+    }
+}
+                </code></pre>
+            </div>
+            
+            <div class="code-example">
+                <h3>Konfiguracja opóźnień bezpieczeństwa</h3>
+                <pre><code class="json">
+{
+    "delays": {
+        "startup": 5000,    // 5s opóźnienie przy starcie
+        "shutdown": 30000,  // 30s opóźnienie przy wyłączeniu
+        "switchover": 2000  // 2s opóźnienie przy przełączaniu
+    },
+    "safetyChecks": {
+        "minPressure": 100,
+        "maxPressure": 500,
+        "sensorTimeout": 1000
+    }
+}
                 </code></pre>
             </div>
         </section>
@@ -109,12 +181,36 @@ automation:
         <section class="project-conclusions">
             <h2>Wnioski i rezultaty</h2>
             <div class="conclusions-content">
-                <p>Projekt znacząco poprawił komfort życia mieszkańców poprzez:</p>
-                <ul>
-                    <li>Redukcję zużycia energii o 30%</li>
-                    <li>Automatyzację codziennych zadań</li>
-                    <li>Zwiększenie bezpieczeństwa</li>
-                </ul>
+                <div class="conclusion-item">
+                    <h3>Skuteczna implementacja złożonej logiki</h3>
+                    <p>Mimo wysokiego stopnia skomplikowania diagramu przepływu, zawierającego liczne stany i warunki przejściowe, 
+                       udało się skutecznie przenieść całą logikę do Node-RED. Projekt udowodnił, że nawet złożone systemy automatyki 
+                       można zaimplementować w sposób przejrzysty i efektywny przy użyciu odpowiednich narzędzi.</p>
+                </div>
+
+                <div class="conclusion-item">
+                    <h3>Rozwój praktyk dokumentacyjnych</h3>
+                    <p>W trakcie realizacji projektu znacząco udoskonaliłem podejście do tworzenia dokumentacji technicznej. 
+                       Wprowadzenie szczegółowych diagramów, przejrzystych opisów stanów systemu oraz komentarzy w kodzie 
+                       nie tylko ułatwiło proces rozwoju, ale również zapewniło łatwiejszą konserwację i potencjalne modyfikacje 
+                       systemu w przyszłości.</p>
+                </div>
+
+                <div class="conclusion-item">
+                    <h3>Kolejny krok w rozwoju automatyki</h3>
+                    <p>Pomyślna realizacja tego projektu stanowi kolejny ważny element w rozwoju systemu automatyki. 
+                       Zdobyte doświadczenie oraz wypracowane rozwiązania będą cennym punktem odniesienia przy realizacji 
+                       przyszłych projektów automatyzacji.</p>
+                </div>
+
+                <div class="metrics">
+                    <h3>Kluczowe osiągnięcia:</h3>
+                    <ul>
+                        <li>Pełne zautomatyzowanie systemu odciągu wiórów</li>
+                        <li>Pełna dokumentacja techniczna systemu</li>
+                        <li>Zwiększenie żywotności komponentów poprzez optymalne sterowanie</li>
+                    </ul>
+                </div>
             </div>
         </section>
 

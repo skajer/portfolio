@@ -29,7 +29,27 @@ const projectTranslations = {
         implementation: 'Implementacja',
         gallery: 'Galeria',
         conclusions: 'Wnioski i rezultaty',
-        demo: 'Demo'
+        demo: 'Demo',
+        blastgate: {
+            title: 'System Automatyzacji Odciągu Trocin',
+            states: {
+                title: 'Stany Systemu',
+                status0: 'Tryb czuwania',
+                status1: 'Piła i strugarka włączone',
+                status2: 'Tylko piła włączona',
+                status3: 'Tylko strugarka włączona',
+                status4: 'Okres wybiegu',
+                status99: 'Sterowanie manualne'
+            },
+            simulator: {
+                saw: 'Piła',
+                planer: 'Strugarka',
+                collector: 'Odciąg',
+                gate1: 'Przepustnica 1',
+                gate2: 'Przepustnica 2',
+                gate3: 'Przepustnica 3'
+            }
+        }
     },
     en: {
         title: 'Home Automation System',

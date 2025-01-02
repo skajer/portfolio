@@ -166,4 +166,135 @@ section h2 {
     section {
         margin: 4rem 0;
     }
+}
+
+.diagram-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: auto; /* Pozwala przewijać poziomo na małych ekranach */
+}
+
+.diagram-content img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Media query dla mniejszych ekranów */
+@media (max-width: 768px) {
+    .diagram-content {
+        padding: 10px;
+    }
+    
+    .diagram-content img {
+        min-width: 600px; /* Minimalna szerokość, żeby diagram był czytelny */
+    }
+}
+
+.diagram-fullscreen {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+}
+
+.diagram-fullscreen:hover {
+    background-color: #e0e0e0;
+}
+
+.conclusion-item {
+    margin-bottom: 2rem;
+}
+
+.conclusion-item h3 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.conclusion-item p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.metrics {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+}
+
+.metrics h3 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.metrics ul {
+    list-style: none;
+    padding: 0;
+}
+
+.metrics li {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.metrics li::before {
+    content: "✓";
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+}
+
+.components-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.component-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #eaeaea;
+}
+
+.component-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.component-card h4 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin: 0 0 0.8rem 0;
+    font-weight: 600;
+}
+
+.component-card p {
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .components-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .component-card {
+        padding: 1.2rem;
+    }
 } 
