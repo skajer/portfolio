@@ -32,30 +32,30 @@ const translations = {
             subtitle: 'Opinie osób, z którymi miałem przyjemność współpracować',
             testimonials: [
                 {
-                    text: 'Profesjonalne podejście i świetna komunikacja. Projekt został wykonany zgodnie z założeniami i w terminie. Polecam!',
-                    author: 'Jan Kowalski',
-                    position: 'CEO, TechFirm'
+                    text: 'Casper wykonał WYJĄTKOWĄ pracę przy moim projekcie! Jego kod był dopracowany, wolny od błędów i pokazał jego głęboką wiedzę. Co więcej, szybka realizacja i duch współpracy sprawiły, że praca z nim była przyjemnością.',
+                    author: 'Johann Schwarz',
+                    position: 'Niemcy'
                 },
                 {
-                    text: 'Świetna współpraca i doskonałe zrozumienie potrzeb klienta. Efekt końcowy przeszedł nasze oczekiwania.',
-                    author: 'Anna Nowak',
-                    position: 'Marketing Manager, StartupXYZ'
+                    text: 'Casper jest fantastyczną osobą do współpracy! To, że jest tak młody, świadczy o tym, jak jest inteligentny i zdolny. Jestem pod wielkim wrażeniem poziomu jego pracy i profesjonalizmu. Gorąco polecam Caspera, jeśli szukasz dobrze wykonanej pracy przed terminem.',
+                    author: 'Hansel Annie',
+                    position: 'Kanada'
                 },
                 {
-                    text: 'Innowacyjne podejście do projektu i bardzo dobra znajomość najnowszych technologii. Zdecydowanie polecam!',
-                    author: 'Piotr Wiśniewski',
-                    position: 'CTO, InnoTech'
+                    text: 'Świetna współpraca, moje wymagania były trudne do wytłumaczenia, ale dzięki Casperowi osiągnęliśmy zamierzony rezultat. Dziękuję jeszcze raz',
+                    author: 'Roberto Buti',
+                    position: 'Włochy'
                 }
             ]
         },
         contact: {
             title: 'Umów spotkanie',
-            subtitle: 'Porozmawiajmy o Twoim projekcie. Wypełnij formularz, a skontaktuję się z Tobą w ciągu 24 godzin.',
+            subtitle: 'Porozmawiajmy o Twoim projekcie. Skontaktuj się ze mną bezpośrednio przez kalendarz.',
             form: {
                 name: 'Imię i nazwisko',
                 email: 'Email',
                 message: 'Wiadomość',
-                submit: 'Wyślij wiadomość →'
+                submit: 'Umów spotkanie →'
             }
         },
         whyMe: {
@@ -63,20 +63,24 @@ const translations = {
             features: [
                 {
                     number: '01',
-                    title: 'Indywidualne podejście',
-                    description: 'Każdy projekt traktuję jako unikalne wyzwanie, dostosowując rozwiązania do konkretnych potrzeb klienta.'
+                    title: 'Szybkość i jakość',
+                    description: 'Wieloletnie doświadczenie w freelancingu nauczyło mnie efektywnej realizacji projektów. Szybkość nie oznacza kompromisów w jakości - to sytuacja win-win, gdzie Ty otrzymujesz produkt szybciej, a ja mogę podjąć się kolejnych wyzwań.'
                 },
                 {
                     number: '02',
-                    title: 'Nowoczesne technologie',
-                    description: 'Wykorzystuję najnowsze narzędzia i frameworki, zapewniając wydajność i przyszłościowe rozwiązania.'
+                    title: 'Sprawdzone doświadczenie',
+                    description: 'Ponad 4 lata aktywnej pracy z różnorodnymi projektami i technologiami. Każdy zrealizowany projekt to nie tylko kod, ale również cenne doświadczenie w komunikacji i rozwiązywaniu złożonych problemów biznesowych.'
                 },
                 {
                     number: '03',
-                    title: 'Terminowość',
-                    description: 'Projekty realizuję zgodnie z ustalonym harmonogramem, zapewniając regularną komunikację i aktualizacje.'
+                    title: 'Kompleksowe podejście',
+                    description: 'Nie tylko programuję, ale również doradzam w kwestiach technicznych i biznesowych. Pomagam wybrać optymalne rozwiązania, które sprawdzą się zarówno dziś, jak i w przyszłości.'
                 }
             ]
+        },
+        footer: {
+            copyright: '© 2024 Kacper Stefański. Wszystkie prawa zastrzeżone.',
+            privacyPolicy: 'Polityka Prywatności'
         }
     },
     en: {
@@ -111,30 +115,30 @@ const translations = {
             subtitle: 'Testimonials from people I had the pleasure to work with',
             testimonials: [
                 {
-                    text: 'Professional approach and great communication. The project was completed according to requirements and on time. I recommend!',
-                    author: 'John Smith',
-                    position: 'CEO, TechFirm'
+                    text: 'Casper did an EXCEPTIONAL job on my project! His code was polished, bug-free, and showcased his deep expertise. Moreover, his prompt delivery and cooperative spirit made working with him a breeze.',
+                    author: 'Johann Schwarz',
+                    position: 'Germany'
                 },
                 {
-                    text: 'Great cooperation and excellent understanding of client needs. The final result exceeded our expectations.',
-                    author: 'Anna Smith',
-                    position: 'Marketing Manager, StartupXYZ'
+                    text: 'Casper is fantastic to work with! That he is so young is a testament to how smart and capable he is. I\'m very impressed at the level of his work and his professionalism. I highly recommend Casper if you are looking for a job well done and ahead of schedule.',
+                    author: 'Hansel Annie',
+                    position: 'Canada'
                 },
                 {
-                    text: 'Innovative approach to the project and very good knowledge of the latest technologies. Definitely recommend!',
-                    author: 'Peter Wilson',
-                    position: 'CTO, InnoTech'
+                    text: 'Great cooperation, my request was difficult to explain, but thanks to Casper we have reached the result. Thank you again',
+                    author: 'Roberto Buti',
+                    position: 'Italy'
                 }
             ]
         },
         contact: {
             title: 'Schedule a meeting',
-            subtitle: 'Let\'s talk about your project. Fill out the form, and I\'ll contact you within 24 hours.',
+            subtitle: 'Let\'s talk about your project. Contact me directly through the calendar.',
             form: {
                 name: 'Full name',
                 email: 'Email',
                 message: 'Message',
-                submit: 'Send message →'
+                submit: 'Schedule a meeting →'
             }
         },
         whyMe: {
@@ -142,20 +146,24 @@ const translations = {
             features: [
                 {
                     number: '01',
-                    title: 'Individual approach',
-                    description: 'I treat each project as a unique challenge, tailoring solutions to specific client needs.'
+                    title: 'Speed and quality',
+                    description: 'Years of freelancing taught me how to deliver projects efficiently. Speed doesn\'t mean compromising quality - it\'s a win-win situation where you get your product faster, and I can take on new challenges.'
                 },
                 {
                     number: '02',
-                    title: 'Modern technologies',
-                    description: 'I use the latest tools and frameworks, ensuring efficiency and future-proof solutions.'
+                    title: 'Proven experience',
+                    description: 'Over 4 years of active work with diverse projects and technologies. Each completed project represents not just code, but valuable experience in communication and solving complex business problems.'
                 },
                 {
                     number: '03',
-                    title: 'Timeliness',
-                    description: 'I complete projects according to the established schedule, ensuring regular communication and updates.'
+                    title: 'Comprehensive approach',
+                    description: 'I don\'t just code, I also provide technical and business consulting. I help choose optimal solutions that will work both today and in the future.'
                 }
             ]
+        },
+        footer: {
+            copyright: '© 2024 Kacper Stefański. All rights reserved.',
+            privacyPolicy: 'Privacy Policy'
         }
     }
 };
@@ -245,12 +253,7 @@ function changeLanguage(lang) {
     if (contactSection) {
         contactSection.querySelector('h2').textContent = t.contact.title;
         contactSection.querySelector('.section-subtitle').textContent = t.contact.subtitle;
-        
-        const form = contactSection.querySelector('form');
-        form.querySelector('label[for="name"]').textContent = t.contact.form.name;
-        form.querySelector('label[for="email"]').textContent = t.contact.form.email;
-        form.querySelector('label[for="message"]').textContent = t.contact.form.message;
-        form.querySelector('.submit-btn').textContent = t.contact.form.submit;
+        contactSection.querySelector('.submit-btn').textContent = t.contact.form.submit;
     }
     
     // Zapisz preferencję języka
@@ -262,21 +265,23 @@ function changeLanguage(lang) {
     });
 }
 
-// Nasłuchiwanie kliknięć w przyciski języka
-document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        const lang = btn.getAttribute('data-lang');
-        changeLanguage(lang);
-    });
-});
-
-// Ustaw język przy załadowaniu strony
+// Nasłuchiwanie na przyciski zmiany języka
 document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('preferredLanguage');
-    const browserLang = navigator.language.split('-')[0];
-    const initialLang = savedLang || (browserLang === 'pl' ? 'pl' : 'en');
-    
-    changeLanguage(initialLang);
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.getAttribute('data-lang');
+            
+            // Aktualizuj aktywny przycisk
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            // Zmień język
+            changeLanguage(lang);
+        });
+    });
+
+    // Ustaw początkowy język
+    changeLanguage(currentLang);
 });
 
 // Funkcja do śledzenia aktywnej sekcji
@@ -321,6 +326,7 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
         // Zapisz preferencję języka
         localStorage.setItem('preferredLanguage', lang);
     });
+
 });
 
 // Dodaj na końcu pliku

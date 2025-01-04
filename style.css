@@ -734,10 +734,9 @@ body {
 }
 
 .contact-form {
-    text-align: left;
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
 }
 
 .form-group {
@@ -769,21 +768,21 @@ body {
 }
 
 .submit-btn {
-    background: transparent;
-    border: 1px solid var(--accent-color);
-    color: var(--accent-color);
+    display: inline-block;
     padding: 1rem 2rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #00ffff;
+    color: #00ffff;
+    text-decoration: none;
+    border-radius: 4px;
     transition: all 0.3s ease;
-    margin-top: 1rem;
-    align-self: flex-end;
+    text-align: center;
+    min-width: 200px;
 }
 
 .submit-btn:hover {
-    background: var(--accent-color);
-    color: var(--background-dark);
+    background-color: #00ffff;
+    color: #000;
 }
 
 @media (max-width: 768px) {
