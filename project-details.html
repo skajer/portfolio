@@ -3,229 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>System automatyzacji domu - Szczegóły projektu</title>
+    <title>System automatyzacji odciągu wiórów - Szczegóły projektu</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="project-details.css">
-    <!-- Dodaj highlight.js dla podświetlania składni kodu -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
 </head>
 <body>
-    <!-- Nawigacja (taka sama jak w głównym layoucie) -->
-    <nav class="navbar">
-        <!-- ... (kod nawigacji) ... -->
-    </nav>
+    <div class="project-container">
+        <!-- Dodaj na samym początku, przed wszystkimi innymi elementami -->
+        <div class="language-switch">
+            <button class="lang-btn active" data-lang="pl">PL</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
 
-    <main class="project-details">
-        <!-- Hero sekcja projektu -->
-        <section class="project-hero">
-            <div class="project-header">
-                <h1>System automatyzacji odciągu wiórów</h1>
-                <p class="project-subtitle">Inteligentny system sterowania przepustnicami w systemie odciągu wiórów</p>
-                <div class="project-tags">
-                    <span class="tag">Automatyka</span>
-                    <span class="tag">Node-RED</span>
-                    <span class="tag">RPI</span>
-                </div>
-            </div>
-        </section>
+        <!-- Nawigacja (taka sama jak w głównym layoucie) -->
+        <nav class="navbar">
+            <!-- ... (kod nawigacji) ... -->
+        </nav>
 
-        <!-- Przegląd projektu -->
-        <section class="project-overview">
-            <h2>Przegląd projektu</h2>
-            <div class="overview-grid">
-                <div class="overview-item">
-                    <h3>Cel projektu</h3>
-                    <p>Stworzenie zautomatyzowanego systemu sterowania przepustnicami (blastgates) w systemie odciągu wiórów, 
-                       który automatycznie zarządza przepływem powietrza w zależności od stanu maszyn (piła, strugarka).</p>
-                </div>
-                <div class="overview-item">
-                    <h3>Komponenty systemu</h3>
-                    <div class="components-grid">
-                        <div class="component-card">
-                            <h4>Sterownik główny</h4>
-                            <p>Raspberry Pi 4 z Node-RED do zarządzania całym systemem</p>
+        <main class="project-details">
+            <!-- Hero sekcja projektu -->
+            <section class="project-hero">
+                <div class="project-header">
+                    <h1>System automatyzacji odciągu wiórów</h1>
+                    <p class="project-subtitle">Inteligentny system sterowania przepustnicami w systemie odciągu wiórów</p>
+                    <div class="project-tags">
+                        <span class="tag" data-tag="automation">Automatyka</span>
+                        <span class="tag" data-tag="nodeRed">Node-RED</span>
+                        <span class="tag" data-tag="rpi">RPI</span>
+                    </div>
+                    <div class="project-stats">
+                        <div class="stat-item" data-stat="codeLines">
+                            <span class="stat-value">💻 ~ 150</span>
+                            <span class="stat-label">Linijek kodu</span>
                         </div>
-                        <div class="component-card">
-                            <h4>Przepustnice</h4>
-                            <p>3 automatyczne przepustnice z siłownikami 24V</p>
+                        <div class="stat-item" data-stat="developmentTime">
+                            <span class="stat-value">⏱️ 1</span>
+                            <span class="stat-label">Tydzień realizacji</span>
                         </div>
-                        <div class="component-card">
-                            <h4>Czujniki</h4>
-                            <p>Sensory prądu do wykrywania stanu maszyn</p>
-                        </div>
-                        <div class="component-card">
-                            <h4>Interfejs</h4>
-                            <p>Panel sterowania z wyświetlaczem LCD i przyciskami</p>
-                        </div>
-                        <div class="component-card">
-                            <h4>Zasilanie</h4>
-                            <p>Redundantny system zasilania z UPS</p>
-                        </div>
-                        <div class="component-card">
-                            <h4>Bezpieczeństwo</h4>
-                            <p>System zabezpieczeń i monitoring ciśnienia</p>
+                        <div class="stat-item" data-stat="clientRating">
+                            <span class="stat-value">⭐ 5/5</span>
+                            <span class="stat-label">Ocena klienta</span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Główne funkcje -->
-        <section class="project-features">
-            <h2>Główne funkcje</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>Automatyczne sterowanie</h3>
-                    <p>System automatycznie wykrywa stan maszyn i dostosowuje przepustnice.</p>
+            <!-- Przegląd projektu -->
+            <section class="project-overview">
+                <h2 class="section-title" data-section="projectOverview">Przegląd projektu</h2>
+                <div class="overview-grid">
+                    <div class="overview-item">
+                        <h3>Historia projektu</h3>
+                        <p>
+                            Projekt rozpoczął się od wiadomości na platformie Fiverr, gdzie klient poszukiwał specjalisty do 
+                            implementacji systemu automatyki. Posiadał już kompletną infrastrukturę sprzętową - system odciągu 
+                            wiórów z przepustnicami sterowanymi serwomechanizmami, ale brakowało mu wiedzy technicznej do 
+                            zaprogramowania logiki sterowania.
+                        </p>
+                        
+                        <p>
+                            Po wstępnej analizie potrzeb i konsultacjach, zdecydowaliśmy się na wykorzystanie Node-RED jako 
+                            platformy do implementacji systemu sterowania, ze względu na jego elastyczność i możliwość szybkiego 
+                            prototypowania rozwiązań.
+                        </p>
+                    </div>
+                    <div class="overview-item">
+                        <h3 data-section="systemComponents">Komponenty systemu</h3>
+                        <div class="components-grid">
+                            <div class="component-card" data-component="mainController">
+                                <h3>Main Controller</h3>
+                                <p>Raspberry Pi 4 with Node-RED for system management</p>
+                            </div>
+                            <div class="component-card" data-component="dampers">
+                                <h3>Przepustnice</h3>
+                                <p>3 automatyczne przepustnice z siłownikami 24V</p>
+                            </div>
+                            <div class="component-card" data-component="sensors">
+                                <h3>Czujniki</h3>
+                                <p>Sensory prądu do wykrywania stanu maszyn</p>
+                            </div>
+                            <div class="component-card" data-component="interface">
+                                <h3>Interfejs</h3>
+                                <p>Panel sterowania z wyświetlaczem LCD i przyciskami</p>
+                            </div>
+                            <div class="component-card" data-component="power">
+                                <h3>Zasilanie</h3>
+                                <p>Redundantny system zasilania z UPS</p>
+                            </div>
+                            <div class="component-card" data-component="safety">
+                                <h3>Bezpieczeństwo</h3>
+                                <p>System zabezpieczeń i monitoring ciśnienia</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <h3>Sterowanie ręczne</h3>
-                    <p>Możliwość manualnego sterowania przepustnicami poprzez przyciski.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Opóźnienia bezpieczeństwa</h3>
-                    <p>Wbudowane opóźnienia czasowe zapewniające bezpieczne przełączanie stanów.</p>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="project-diagram">
-            <h2>Diagram przepływu</h2>
-            <div class="diagram-content">
-                <img src="PROJECTS/blastgate-automation/images/Blastgate-Mindmap-V4.jpg" alt="Diagram przepływu systemu automatyzacji">
-                <a href="PROJECTS/blastgate-automation/images/Blastgate-Mindmap-V4.jpg" target="_blank" class="diagram-fullscreen">Zobacz pełny diagram</a>
-                <p>Diagram przedstawia logikę działania systemu, włączając wszystkie stany i przejścia między nimi.</p>
-            </div>
-        </section>
+            <!-- Główne funkcje -->
+            <section class="project-features">
+                <h2 class="section-title" data-section="mainFeatures">Główne funkcje</h2>
+                <div class="features-grid">
+                    <div class="feature-card" data-feature="automaticControl">
+                        <h3>Automatyczne sterowanie</h3>
+                        <p>System automatycznie wykrywa stan maszyn i dostosowuje przepustnice.</p>
+                    </div>
+                    <div class="feature-card" data-feature="manualControl">
+                        <h3>Sterowanie ręczne</h3>
+                        <p>Możliwość manualnego sterowania przepustnicami poprzez przyciski.</p>
+                    </div>
+                    <div class="feature-card" data-feature="safetyDelays">
+                        <h3>Opóźnienia bezpieczeństwa</h3>
+                        <p>Wbudowane opóźnienia czasowe zapewniające bezpieczne przełączanie stanów.</p>
+                    </div>
+                </div>
+            </section>
 
-        <!-- Przykładowy kod -->
-        <section class="project-code">
-            <h2>Implementacja</h2>
-            <div class="code-example">
-                <h3>Logika sterowania w Node-RED</h3>
-                <pre><code class="javascript">
-// Funkcja określająca stan systemu
-function determineSystemState(msg) {
-    const saw = msg.payload.saw;         // stan piły
-    const planer = msg.payload.planer;   // stan strugarki
+            <section class="project-diagram">
+                <h2 class="section-title" data-section="flowDiagram">Diagram przepływu</h2>
+                <div class="diagram-content">
+                    <img src="PROJECTS/blastgate-automation/images/Blastgate-Mindmap-V4.jpg" alt="Diagram przepływu systemu automatyzacji">
+                    <button class="diagram-button" data-diagram="viewButton">Zobacz pełny diagram</button>
+                    <p class="diagram-description" data-diagram="description">
+                        Diagram przedstawia logikę działania systemu, włączając wszystkie stany i przejścia między nimi.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Przykładowy kod -->
+            <section class="project-code">
+                <h2 class="section-title" data-section="troubleshooting">Kody | Problemy | Rozwiązania</h2>
+                <div class="implementation-section">
+                    <!-- Kod -->
+                    <div class="code-example">
+                        <h3 data-code="voltageDetection">Wykrywanie anomalii napięcia w Node-RED</h3>
+                        <pre><code class="javascript">
+function VoltageAnomaly(msg) {
+    var buffer = context.get("voltageBuffer") || [];
+    var voltage = msg.payload.voltage;
     
-    if (saw && planer) return 1;         // obie maszyny włączone
-    if (saw && !planer) return 2;        // tylko piła
-    if (!saw && planer) return 3;        // tylko strugarka
-    if (!saw && !planer) return 4;       // okres po-uruchomieniowy
-    return 0;                            // standby
-}
-
-// Funkcja sterująca przepustnicami
-function controlBlastgates(state) {
-    switch(state) {
-        case 1: // Piła + Strugarka
-            return {
-                gate1: true,
-                gate2: true,
-                gate3: false
-            };
-        case 2: // Tylko piła
-            return {
-                gate1: true,
-                gate2: false,
-                gate3: false
-            };
-        case 3: // Tylko strugarka
-            return {
-                gate1: false,
-                gate2: true,
-                gate3: false
-            };
-        default: // Standby lub okres po-uruchomieniowy
-            return {
-                gate1: false,
-                gate2: false,
-                gate3: false
-            };
+    buffer.push(voltage);
+    
+    if (buffer.length > 3) {
+        buffer.shift();
     }
-}
-                </code></pre>
-            </div>
-            
-            <div class="code-example">
-                <h3>Konfiguracja opóźnień bezpieczeństwa</h3>
-                <pre><code class="json">
-{
-    "delays": {
-        "startup": 5000,    // 5s opóźnienie przy starcie
-        "shutdown": 30000,  // 30s opóźnienie przy wyłączeniu
-        "switchover": 2000  // 2s opóźnienie przy przełączaniu
-    },
-    "safetyChecks": {
-        "minPressure": 100,
-        "maxPressure": 500,
-        "sensorTimeout": 1000
+    
+    context.set("voltageBuffer", buffer);
+    
+    if (buffer.length === 3) {
+        var avgPrevious = (buffer[0] + buffer[1]) / 2;
+        
+        if (Math.abs(buffer[2] - avgPrevious) > 1.0 && buffer[2] < 0.5) {
+            node.warn("Anomaly with voltage: " + buffer[2]);
+            return null;
+        }
     }
+    
+    return { payload: { voltage: voltage, buffer: buffer } };
 }
-                </code></pre>
+                        </code></pre>
+                        <div class="troubleshooting-section">
+                            <h3 data-translate="troubleshooting.title">Problem i rozwiązanie</h3>
+                            <p data-translate="troubleshooting.problem">
+                                Podczas testów systemu zaobserwowaliśmy fałszywe odczyty z czujników prądu, które mogły prowadzić do nieprawidłowego wykrywania stanu maszyn. Problem polegał na sporadycznych, krótkotrwałych spadkach napięcia, które system interpretował jako wyłączenie urządzenia.
+                            </p>
+                            <p data-translate="troubleshooting.solution">
+                                Rozwiązaniem było wprowadzenie bufora pomiarów i algorytmu wykrywania anomalii, który:
+                            </p>
+                            <ul>
+                                <li data-translate="troubleshooting.steps.0"></li>
+                                <li data-translate="troubleshooting.steps.1"></li>
+                                <li data-translate="troubleshooting.steps.2"></li>
+                                <li data-translate="troubleshooting.steps.3"></li>
+                            </ul>
+                            <p data-translate="troubleshooting.implementation">
+                                Implementacja tego rozwiązania znacząco poprawiła stabilność systemu, eliminując fałszywe przełączenia przepustnic spowodowane zakłóceniami w pomiarach.
+                            </p>
+                        </div>
+                    </div>
+                    
+                </section>
+
+                <!-- Galeria -->
+                <section class="project-gallery">
+                    <h2 class="section-title" data-section="gallery">Galeria</h2>
+                    <div class="gallery-grid">
+                        <img src="PROJECTS/blastgate-automation/images/part-of-flow-3.png" alt="Flow w Node-RED" loading="lazy">
+                        <img src="PROJECTS/blastgate-automation/images/part-of-flow-2.png" alt="Flow w Node-RED" loading="lazy">
+                        <img src="PROJECTS/blastgate-automation/images/part-of-flow-1.png" alt="Flow w Node-RED" loading="lazy">
+                        <img src="PROJECTS/blastgate-automation/images/dashboard.jpg" alt="Dashboard systemu" loading="lazy">
+                    </div>
+                </section>
+
+                <!-- Wnioski -->
+                <section class="project-conclusions">
+                    <h2 class="section-title" data-section="conclusions">Wnioski i rezultaty</h2>
+                    <div class="conclusions-content">
+                        <div class="conclusion-item">
+                            <h3 data-translate="conclusions.implementation.title">Skuteczna implementacja złożonej logiki</h3>
+                            <p data-translate="conclusions.implementation.description">Mimo wysokiego stopnia skomplikowania...</p>
+                        </div>
+
+                        <div class="conclusion-item">
+                            <h3 data-translate="conclusions.documentation.title">Rozwój praktyk dokumentacyjnych</h3>
+                            <p data-translate="conclusions.documentation.description">W trakcie realizacji projektu...</p>
+                        </div>
+
+                        <div class="conclusion-item">
+                            <h3 data-translate="conclusions.nextStep.title">Kolejny krok w rozwoju automatyki</h3>
+                            <p data-translate="conclusions.nextStep.description">Pomyślna realizacja tego projektu...</p>
+                        </div>
+
+                        <div class="key-achievements-section">
+                            <h3 data-translate="conclusions.keyAchievements.title">Kluczowe osiągnięcia:</h3>
+                            <div class="achievements-list">
+                                <div class="achievement-item">
+                                    <p data-translate="conclusions.keyAchievements.points.0"></p>
+                                </div>
+                                <div class="achievement-item">
+                                    <p data-translate="conclusions.keyAchievements.points.1"></p>
+                                </div>
+                                <div class="achievement-item">
+                                    <p data-translate="conclusions.keyAchievements.points.2"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Lightbox -->
+            <div class="lightbox">
+                <button class="lightbox-close">×</button>
+                <button class="lightbox-nav lightbox-prev">‹</button>
+                <button class="lightbox-nav lightbox-next">›</button>
+                <img src="" alt="Powiększone zdjęcie">
             </div>
-        </section>
 
-        <!-- Galeria -->
-        <section class="project-gallery">
-            <h2>Galeria</h2>
-            <div class="gallery-grid">
-                <img src="img/dashboard.png" alt="Dashboard Home Assistant">
-                <img src="img/node-red-flow.png" alt="Flow w Node-RED">
-                <img src="img/hardware-setup.png" alt="Konfiguracja sprzętowa">
-            </div>
-        </section>
-
-        <!-- Wnioski -->
-        <section class="project-conclusions">
-            <h2>Wnioski i rezultaty</h2>
-            <div class="conclusions-content">
-                <div class="conclusion-item">
-                    <h3>Skuteczna implementacja złożonej logiki</h3>
-                    <p>Mimo wysokiego stopnia skomplikowania diagramu przepływu, zawierającego liczne stany i warunki przejściowe, 
-                       udało się skutecznie przenieść całą logikę do Node-RED. Projekt udowodnił, że nawet złożone systemy automatyki 
-                       można zaimplementować w sposób przejrzysty i efektywny przy użyciu odpowiednich narzędzi.</p>
-                </div>
-
-                <div class="conclusion-item">
-                    <h3>Rozwój praktyk dokumentacyjnych</h3>
-                    <p>W trakcie realizacji projektu znacząco udoskonaliłem podejście do tworzenia dokumentacji technicznej. 
-                       Wprowadzenie szczegółowych diagramów, przejrzystych opisów stanów systemu oraz komentarzy w kodzie 
-                       nie tylko ułatwiło proces rozwoju, ale również zapewniło łatwiejszą konserwację i potencjalne modyfikacje 
-                       systemu w przyszłości.</p>
-                </div>
-
-                <div class="conclusion-item">
-                    <h3>Kolejny krok w rozwoju automatyki</h3>
-                    <p>Pomyślna realizacja tego projektu stanowi kolejny ważny element w rozwoju systemu automatyki. 
-                       Zdobyte doświadczenie oraz wypracowane rozwiązania będą cennym punktem odniesienia przy realizacji 
-                       przyszłych projektów automatyzacji.</p>
-                </div>
-
-                <div class="metrics">
-                    <h3>Kluczowe osiągnięcia:</h3>
-                    <ul>
-                        <li>Pełne zautomatyzowanie systemu odciągu wiórów</li>
-                        <li>Pełna dokumentacja techniczna systemu</li>
-                        <li>Zwiększenie żywotności komponentów poprzez optymalne sterowanie</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Demo -->
-        <section class="project-demo">
-            <h2>Demo</h2>
-            <div class="demo-content">
-                <p>Zobacz system w akcji:</p>
-                <a href="#" class="demo-btn">Wypróbuj demo →</a>
-            </div>
-        </section>
-    </main>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-    <script src="script.js"></script>
-    <script>hljs.highlightAll();</script>
-</body>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+            <script src="project-details.js"></script>
+        </div>
+    </body>
 </html> 
