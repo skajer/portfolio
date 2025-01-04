@@ -324,6 +324,10 @@ const translations = {
                 "Odrzuca podejrzane odczyty, gdy różnica jest zbyt duża"
             ],
             implementation: "Implementacja tego rozwiązania znacząco poprawiła stabilność systemu, eliminując fałszywe przełączenia przepustnic spowodowane zakłóceniami w pomiarach."
+        },
+
+        code: {
+            voltageDetection: "Wykrywanie anomalii napięcia w Node-RED"
         }
     },
     
@@ -478,8 +482,8 @@ const translations = {
             systemComponents: "System Components",
             mainFeatures: "Main Features",
             flowDiagram: "Flow Diagram",
-            troubleshooting: "Kody | Problemy | Rozwiązania",
-            gallery: "Galeria",
+            troubleshooting: "Code | Issues | Solutions",
+            gallery: "Gallery",
             conclusions: "Conclusions and Results"
         },
 
@@ -514,6 +518,10 @@ const translations = {
                 "Rejects suspicious readings when the difference is too large"
             ],
             implementation: "Implementation of this solution significantly improved system stability by eliminating false damper switching caused by measurement interference."
+        },
+
+        code: {
+            voltageDetection: "Voltage Anomaly Detection in Node-RED"
         }
     }
 };
