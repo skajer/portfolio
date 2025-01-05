@@ -692,3 +692,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 }); 
+
+// Obsługa menu mobilnego
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('.nav-menu').classList.toggle('active');
+});
+
+// Zamykanie menu po kliknięciu w link
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.nav-menu').classList.remove('active');
+    });
+}); 

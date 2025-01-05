@@ -13,11 +13,11 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-menu">
-                <a href="#" class="nav-link active" data-key="home">Strona główna</a>
-                <a href="#portfolio" class="nav-link" data-key="portfolio">Portfolio</a>
-                <a href="#about" class="nav-link" data-key="about">O mnie</a>
-                <a href="#opinie" class="nav-link" data-key="testimonials">Opinie</a>
-                <a href="#kontakt" class="nav-link" data-key="contact">Kontakt</a>
+                <a href="#" class="nav-link active" data-translate="nav.home">Strona główna</a>
+                <a href="#portfolio" class="nav-link" data-translate="nav.portfolio">Portfolio</a>
+                <a href="#about" class="nav-link" data-translate="nav.about">O mnie</a>
+                <a href="#opinie" class="nav-link" data-translate="nav.testimonials">Opinie</a>
+                <a href="#kontakt" class="nav-link" data-translate="nav.contact">Kontakt</a>
             </div>
             <div class="mobile-nav">
                 <div class="lang-switcher">
@@ -38,10 +38,10 @@
     <section class="hero" id="hero">
         <div class="hero-content">
             <div class="hero-left">
-                <h1>Cześć, jestem <br>Kacper<span class="cursor">|</span></h1>
-                <p class="subtitle">Developer | Biznesmen | Freelancer</p>
+                <h1><span data-translate="hero.title">Cześć, jestem</span> <br><span data-translate="hero.name">Kacper</span><span class="cursor">|</span></h1>
+                <p class="subtitle" data-translate="hero.subtitle">Developer | Biznesmen | Freelancer</p>
                 <div class="hero-links">
-                    <a href="#kontakt" class="cta-button">Umów się na spotkanie 💻</a>
+                    <a href="#kontakt" class="cta-button" data-translate="hero.cta">Umów się na spotkanie 💻</a>
                     <a href="https://github.com/skajer" class="social-link">GitHub</a>
                 </div>
             </div>
@@ -76,19 +76,19 @@
     </section>
 
     <section id="portfolio" class="portfolio">
-        <h2>Portfolio</h2>
+        <h2 data-translate="portfolio.title">Portfolio</h2>
         <div class="projects-grid">
             <a href="project-details.html" class="project-card">
                 <div class="project-content">
-                    <h3>System automatyzacji domu</h3>
-                    <p>Kompleksowy system zarządzania inteligentnym domem oparty o Home Assistant</p>
+                    <h3 data-translate="portfolio.projects.blastgate.title">System automatyzacji domu</h3>
+                    <p data-translate="portfolio.projects.blastgate.description">Kompleksowy system zarządzania inteligentnym domem oparty o Home Assistant</p>
                     <div class="project-tags">
                         <span class="tag">Home Assistant</span>
                         <span class="tag">Node-RED</span>
                         <span class="tag">MQTT</span>
                     </div>
                     <div class="project-links">
-                        <span class="project-link">Szczegóły projektu →</span>
+                        <span class="project-link" data-translate="portfolio.projects.blastgate.links.details">Szczegóły projektu →</span>
                         <span class="project-link">Demo</span>
                     </div>
                 </div>
@@ -98,86 +98,86 @@
     </section>
 
     <section id="about" class="about">
-        <h2>O mnie</h2>
-        <p>Jestem programistą specjalizującym się w tworzeniu nowoczesnych aplikacji webowych i automatyzacji procesów. Moje podejście skupia się na dostarczaniu efektywnych i skalowalnych rozwiązań.</p>
+        <h2 data-translate="about.title">O mnie</h2>
+        <p data-translate="about.description">Jestem programistą specjalizującym się w tworzeniu nowoczesnych aplikacji webowych i automatyzacji procesów. Moje podejście skupia się na dostarczaniu efektywnych i skalowalnych rozwiązań.</p>
         
         <div class="stats">
             <div class="stat">
                 <span class="stat-number">4+</span>
-                <span class="stat-label" data-stat="years">Lata doświadczenia</span>
+                <span class="stat-label" data-translate="about.stats.years">Lata doświadczenia</span>
             </div>
             <div class="stat">
                 <span class="stat-number">90+</span>
-                <span class="stat-label" data-stat="projects">Zrealizowanych projektów</span>
+                <span class="stat-label" data-translate="about.stats.projects">Zrealizowanych projektów</span>
             </div>
             <div class="stat">
                 <span class="stat-number">60+</span>
-                <span class="stat-label" data-stat="clients">Zadowolonych klientów</span>
+                <span class="stat-label" data-translate="about.stats.clients">Zadowolonych klientów</span>
             </div>
         </div>
     </section>
 
     <section id="opinie" class="testimonials">
-        <h2>Co mówią klienci</h2>
-        <p class="section-subtitle">Opinie osób, z którymi miałem przyjemność współpracować</p>
+        <h2 data-translate="testimonials.title">Co mówią klienci</h2>
+        <p class="section-subtitle" data-translate="testimonials.subtitle">Opinie osób, z którymi miałem przyjemność współpracować</p>
         
         <div class="testimonials-grid">
             <div class="testimonial-card">
-                <p class="testimonial-text">"Profesjonalne podejście i świetna komunikacja. Projekt został wykonany zgodnie z założeniami i w terminie. Polecam!"</p>
+                <p class="testimonial-text" data-translate="testimonials.testimonials.0.text">Casper wykonał WYJĄTKOWĄ pracę przy moim projekcie! Jego kod był dopracowany, wolny od błędów i pokazał jego głęboką wiedzę. Co więcej, szybka realizacja i duch współpracy sprawiły, że praca z nim była przyjemnością.</p>
                 <div class="testimonial-author">
-                    <h3>Jan Kowalski</h3>
-                    <p>CEO, TechFirm</p>
+                    <h3 data-translate="testimonials.testimonials.0.author">Johann Schwarz</h3>
+                    <p data-translate="testimonials.testimonials.0.position">Niemcy</p>
                 </div>
             </div>
 
             <div class="testimonial-card">
-                <p class="testimonial-text">"Świetna współpraca i doskonałe zrozumienie potrzeb klienta. Efekt końcowy przeszedł nasze oczekiwania."</p>
+                <p class="testimonial-text" data-translate="testimonials.testimonials.1.text">Casper jest fantastyczną osobą do współpracy! To, że jest tak młody, świadczy o tym, jak jest inteligentny i zdolny. Jestem pod wielkim wrażeniem poziomu jego pracy i profesjonalizmu. Gorąco polecam Caspera, jeśli szukasz dobrze wykonanej pracy przed terminem.</p>
                 <div class="testimonial-author">
-                    <h3>Anna Nowak</h3>
-                    <p>Marketing Manager, StartupXYZ</p>
+                    <h3 data-translate="testimonials.testimonials.1.author">Hansel Annie</h3>
+                    <p data-translate="testimonials.testimonials.1.position">Kanada</p>
                 </div>
             </div>
 
             <div class="testimonial-card">
-                <p class="testimonial-text">"Innowacyjne podejście do projektu i bardzo dobra znajomość najnowszych technologii. Zdecydowanie polecam!"</p>
+                <p class="testimonial-text" data-translate="testimonials.testimonials.2.text">Świetna współpraca, moje wymagania były trudne do wytłumaczenia, ale dzięki Casperowi osiągnęliśmy zamierzony rezultat. Dziękuję jeszcze raz</p>
                 <div class="testimonial-author">
-                    <h3>Piotr Wiśniewski</h3>
-                    <p>CTO, InnoTech</p>
+                    <h3 data-translate="testimonials.testimonials.2.author">Roberto Buti</h3>
+                    <p data-translate="testimonials.testimonials.2.position">Włochy</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="why-me" class="why-me">
-        <h2>Dlaczego ja?</h2>
+        <h2 data-translate="whyMe.title">Dlaczego ja?</h2>
         
         <div class="features-grid">
             <div class="feature">
-                <div class="feature-number">01</div>
-                <h3>Indywidualne podejście</h3>
-                <p>Każdy projekt traktuję jako unikalne wyzwanie, dostosowując rozwiązania do konkretnych potrzeb klienta.</p>
+                <div class="feature-number" data-translate="whyMe.features.0.number">01</div>
+                <h3 data-translate="whyMe.features.0.title">Indywidualne podejście</h3>
+                <p data-translate="whyMe.features.0.description">Każdy projekt traktuję jako unikalne wyzwanie, dostosowując rozwiązania do konkretnych potrzeb klienta.</p>
             </div>
 
             <div class="feature">
-                <div class="feature-number">02</div>
-                <h3>Nowoczesne technologie</h3>
-                <p>Wykorzystuję najnowsze narzędzia i frameworki, zapewniając wydajność i przyszłościowe rozwiązania.</p>
+                <div class="feature-number" data-translate="whyMe.features.1.number">02</div>
+                <h3 data-translate="whyMe.features.1.title">Nowoczesne technologie</h3>
+                <p data-translate="whyMe.features.1.description">Wykorzystuję najnowsze narzędzia i frameworki, zapewniając wydajność i przyszłościowe rozwiązania.</p>
             </div>
 
             <div class="feature">
-                <div class="feature-number">03</div>
-                <h3>Terminowość</h3>
-                <p>Projekty realizuję zgodnie z ustalonym harmonogramem, zapewniając regularną komunikację i aktualizacje.</p>
+                <div class="feature-number" data-translate="whyMe.features.2.number">03</div>
+                <h3 data-translate="whyMe.features.2.title">Terminowość</h3>
+                <p data-translate="whyMe.features.2.description">Projekty realizuję zgodnie z ustalonym harmonogramem, zapewniając regularną komunikację i aktualizacje.</p>
             </div>
         </div>
     </section>
 
     <section id="kontakt" class="contact">
-        <h2>Umów spotkanie</h2>
-        <p class="section-subtitle">Porozmawiajmy o Twoim projekcie. Skontaktuj się ze mną bezpośrednio przez kalendarz.</p>
+        <h2 data-translate="contact.title">Umów spotkanie</h2>
+        <p class="section-subtitle" data-translate="contact.subtitle">Porozmawiajmy o Twoim projekcie. Skontaktuj się ze mną bezpośrednio przez kalendarz.</p>
         
         <div class="contact-form">
-            <a href="https://app.zencal.io/u/kacper-stefanski/omowienie-projektu" class="submit-btn" target="_blank">
+            <a href="https://app.zencal.io/u/kacper-stefanski/omowienie-projektu" class="submit-btn" target="_blank" data-translate="contact.form.submit">
                 Umów spotkanie →
             </a>
         </div>
@@ -186,12 +186,12 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-left">
-                <p class="copyright">© 2024 Kacper Stefański. Wszystkie prawa zastrzeżone.</p>
+                <p class="copyright" data-translate="footer.copyright">© 2024 Kacper Stefański. Wszystkie prawa zastrzeżone.</p>
             </div>
             <div class="footer-right">
                 <div class="social-links">
                     <a href="https://github.com/skajer" target="_blank" class="social-link">GitHub</a>
-                    <a href="https://linkedin.com/in/kacperskajer" target="_blank" class="social-link">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/kacper-stefa%C5%84ski-pl/" target="_blank" class="social-link">LinkedIn</a>
                     <a href="mailto:kacperstefanski.kontakt@gmail.com" class="social-link">Email</a>
                 </div>
             </div>
