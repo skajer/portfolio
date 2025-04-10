@@ -19,6 +19,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="loader">
+        <div class="spinner"></div>
+    </div>
+
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-menu">
@@ -97,6 +101,20 @@
                             <span class="tag">Raspberry Pi</span>
                             <span class="tag">Node-RED</span>
                             <span class="tag">MQTT</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="projekt1_strona_internetowa.html" style="text-decoration: none;">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 data-translate="portfolio.projects.nowadroga.title">Strona internetowa poradni terapeutycznej</h3>
+                        <p data-translate="portfolio.projects.nowadroga.description">Profesjonalna strona internetowa dla Poradni Leczenia Uzależnień i Współuzależnień w Barlinku</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Responsive Design</span>
                         </div>
                     </div>
                 </div>
@@ -181,13 +199,18 @@
     </section>
 
     <section id="kontakt" class="contact">
-        <h2 data-translate="contact.title">Umów spotkanie</h2>
-        <p class="section-subtitle" data-translate="contact.subtitle">Porozmawiajmy o Twoim projekcie. Skontaktuj się ze mną bezpośrednio przez kalendarz.</p>
+        <h2 data-translate="contact.title">Skontaktuj się ze mną</h2>
+        <p class="section-subtitle" data-translate="contact.subtitle">Porozmawiajmy o Twoim projekcie. Napisz do mnie bezpośrednio.</p>
         
         <div class="contact-form">
-            <a href="https://app.zencal.io/u/kacper-stefanski/omowienie-projektu" class="submit-btn" target="_blank" data-translate="contact.form.submit">
-                Umów spotkanie →
-            </a>
+            <div class="contact-buttons">
+                <a href="mailto:kacperstefanski.kontakt@gmail.com" class="submit-btn" data-translate="contact.form.email">
+                    Napisz e-mail →
+                </a>
+                <a href="https://www.linkedin.com/in/kacper-stefa%C5%84ski-pl/" class="submit-btn" target="_blank" data-translate="contact.form.linkedin">
+                    LinkedIn →
+                </a>
+            </div>
         </div>
     </section>
 
@@ -206,6 +229,7 @@
         </div>
     </footer>
 
+    <script src="translations.js"></script>
     <script src="script.js"></script>
     <script src="https://external-script.js" 
         integrity="sha384-hash" 

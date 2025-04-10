@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona internetowa poradni terapeutycznej - Szczegóły projektu</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="favicons/android-chrome-512x512.png">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-details.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <div class="project-container">
+        <!-- Nawigacja (taka sama jak w głównym layoucie) -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link" data-translate="nav.home">Strona główna</a>
+                    <a href="index.html#portfolio" class="nav-link" data-translate="nav.portfolio">Portfolio</a>
+                    <a href="index.html#about" class="nav-link" data-translate="nav.about">O mnie</a>
+                    <a href="index.html#opinie" class="nav-link" data-translate="nav.testimonials">Opinie</a>
+                    <a href="index.html#kontakt" class="nav-link" data-translate="nav.contact">Kontakt</a>
+                </div>
+                <div class="mobile-nav">
+                    <div class="lang-switcher">
+                        <button class="lang-btn active" data-lang="pl">PL</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                    <button class="menu-toggle" aria-label="Menu">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <main class="project-details">
+            <!-- Hero sekcja projektu -->
+            <section class="project-hero">
+                <div class="project-header">
+                    <h1>Strona internetowa poradni terapeutycznej</h1>
+                    <p class="project-subtitle">Profesjonalna strona internetowa dla Poradni Leczenia Uzależnień i Współuzależnień w Barlinku</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Responsive Design</span>
+                    </div>
+                    <div class="project-stats">
+                        <div class="stat-item" data-stat="codeLines">
+                            <span class="stat-value">💻 ~1200</span>
+                            <span class="stat-label">Linijek kodu</span>
+                        </div>
+                        <div class="stat-item" data-stat="developmentTime">
+                            <span class="stat-value">⏱️ 2</span>
+                            <span class="stat-label">Tygodnie realizacji</span>
+                        </div>
+                        <div class="stat-item" data-stat="clientRating">
+                            <span class="stat-value">⭐ 5/5</span>
+                            <span class="stat-label">Ocena klienta</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Przegląd projektu -->
+            <section class="project-overview">
+                <h2 class="section-title" data-section="projectOverview">Przegląd projektu</h2>
+                <div class="overview-grid">
+                    <div class="overview-item">
+                        <h3>Historia projektu</h3>
+                        <p>
+                            Projekt rozpoczął się od zgłoszenia potrzeby stworzenia profesjonalnej strony internetowej 
+                            dla Poradni Leczenia Uzależnień i Współuzależnień "Nowa Droga" w Barlinku. Klientka potrzebowała 
+                            nowoczesnej witryny, która prezentowałaby jej działalność terapeutyczną w sposób przejrzysty 
+                            i budujący zaufanie potencjalnych pacjentów.
+                        </p>
+                        
+                        <p>
+                            Po wstępnych konsultacjach i analizie potrzeb, zdecydowaliśmy się na stworzenie strony, która 
+                            będzie łączyć profesjonalny wygląd z łatwością obsługi i dostępnością dla wszystkich grup 
+                            użytkowników, ze szczególnym uwzględnieniem responsywności na urządzeniach mobilnych.
+                        </p>
+                    </div>
+                    <div class="overview-item">
+                        <h3 data-section="keyElements">Kluczowe elementy projektu</h3>
+                        <div class="components-grid">
+                            <div class="component-card" data-component="responsiveDesign">
+                                <h3>Responsywny design</h3>
+                                <p>Pełna optymalizacja na urządzenia mobilne i różne rozmiary ekranów</p>
+                            </div>
+                            <div class="component-card" data-component="userInterface">
+                                <h3>Intuicyjny interfejs</h3>
+                                <p>Prosty i przejrzysty układ ułatwiający nawigację</p>
+                            </div>
+                            <div class="component-card" data-component="content">
+                                <h3>Zoptymalizowana treść</h3>
+                                <p>Profesjonalne teksty dostosowane do potrzeb grupy docelowej</p>
+                            </div>
+                            <div class="component-card" data-component="contactForm">
+                                <h3>Formularz kontaktowy</h3>
+                                <p>Łatwy sposób komunikacji między klientami a poradnią</p>
+                            </div>
+                            <div class="component-card" data-component="seo">
+                                <h3>Optymalizacja SEO</h3>
+                                <p>Dostosowanie strony do wymagań wyszukiwarek internetowych</p>
+                            </div>
+                            <div class="component-card" data-component="fastLoading">
+                                <h3>Szybkie ładowanie</h3>
+                                <p>Optymalizacja szybkości ładowania dla lepszego doświadczenia użytkownika</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Główne funkcje -->
+            <section class="project-features">
+                <h2 class="section-title" data-section="mainFeatures">Główne funkcje</h2>
+                <div class="features-grid">
+                    <div class="feature-card" data-feature="presentation">
+                        <h3>Prezentacja oferty</h3>
+                        <p>Przejrzysta prezentacja usług poradni i dostępnych form terapii.</p>
+                    </div>
+                    <div class="feature-card" data-feature="aboutSection">
+                        <h3>Sekcja o terapeucie</h3>
+                        <p>Budowanie zaufania poprzez przedstawienie kwalifikacji i doświadczenia terapeutki.</p>
+                    </div>
+                    <div class="feature-card" data-feature="contactInfo">
+                        <h3>Informacje kontaktowe</h3>
+                        <p>Łatwy dostęp do danych kontaktowych i lokalizacji poradni.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Galeria -->
+            <section class="project-gallery">
+                <h2 class="section-title" data-section="gallery">Galeria</h2>
+                <div class="gallery-grid">
+                    <img src="PROJECTS/nowadroga-website/images/main-website-look.png" alt="Widok główny strony" loading="lazy">
+                    <img src="PROJECTS/nowadroga-website/images/therapist-section.png" alt="Sekcja o terapeucie" loading="lazy">
+                    <img src="PROJECTS/nowadroga-website/images/therapy-offer.png" alt="Oferta terapii" loading="lazy">
+                    <img src="PROJECTS/nowadroga-website/images/mobile-look.png" alt="Wersja mobilna" loading="lazy">
+                </div>
+            </section>
+
+            <!-- Lightbox -->
+            <div class="lightbox">
+                <button class="lightbox-close">×</button>
+                <button class="lightbox-nav lightbox-prev">‹</button>
+                <button class="lightbox-nav lightbox-next">›</button>
+                <img src="" alt="Powiększone zdjęcie">
+            </div>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+            <script src="projekt1_strona_internetowa.js"></script>
+        </main>
+    </div>
+</body>
+</html> 
