@@ -13,10 +13,10 @@
     <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="favicons/android-chrome-512x512.png">
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Poppins:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="loader">
@@ -52,7 +52,7 @@
         <div class="hero-content">
             <div class="hero-left">
                 <h1><span data-translate="hero.title">Cześć, jestem</span> <br><span data-translate="hero.name">Kacper</span><span class="cursor">|</span></h1>
-                <p class="subtitle" data-translate="hero.subtitle">Developer | Biznesmen | Freelancer</p>
+                <p class="subtitle" data-translate="hero.subtitle">AI & Automation Builder | Node-RED · n8n</p>
                 <div class="hero-links">
                     <a href="#kontakt" class="cta-button" data-translate="hero.cta">Umów się na spotkanie 💻</a>
                     <a href="https://github.com/skajer" class="social-link">GitHub</a>
@@ -60,30 +60,13 @@
                 </div>
             </div>
             <div class="hero-right">
-                <div class="terminal">
+                <div class="terminal automation-log-panel">
                     <div class="terminal-header">
                         <div class="terminal-tabs">
-                            <span class="tab vscode">vscode</span>
-                            <span class="tab branch">main</span>
-                            <span class="tab git">$!</span>
-                            <span class="tab via">via</span>
-                            <span class="tab version">v16.15.1</span>
+                            <span class="tab log-tab">log</span>
                         </div>
                     </div>
-                    <div class="terminal-content">
-                        <div class="command-line">
-                            <span class="prompt">❯</span>
-                            <span class="command typing">git fetch</span>
-                        </div>
-                        <div class="command-line">
-                            <span class="prompt">❯</span>
-                            <span class="command typing-2">npm install</span>
-                        </div>
-                        <div class="command-line">
-                            <span class="prompt">❯</span>
-                            <span class="command typing-3">npm run dev</span>
-                        </div>
-                    </div>
+                    <div class="terminal-content log-content" id="automation-log-content" aria-live="polite"></div>
                 </div>
             </div>
         </div>
@@ -92,34 +75,54 @@
     <section id="portfolio" class="portfolio">
         <h2 data-translate="portfolio.title">Portfolio</h2>
         <div class="projects-grid">
-            <a href="project-details.html" style="text-decoration: none;">
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3 data-translate="portfolio.projects.blastgate.title">System automatyzacji odciągu wiórów</h3>
-                        <p data-translate="portfolio.projects.blastgate.description">Kompleksowy system zarządzania inteligentnym domem oparty o Raspberry Pi</p>
-                        <div class="project-tags">
-                            <span class="tag">Raspberry Pi</span>
-                            <span class="tag">Node-RED</span>
-                            <span class="tag">MQTT</span>
-                        </div>
+            <div class="project-card" data-project="blastgate">
+                <div class="project-content">
+                    <h3 data-translate="portfolio.projects.blastgate.title">System automatyzacji odciągu wiórów</h3>
+                    <p data-translate="portfolio.projects.blastgate.description">Sterowanie przepustnicami odciągu w Node-RED na RPi.</p>
+                    <div class="project-tags">
+                        <span class="tag">Raspberry Pi</span>
+                        <span class="tag">Node-RED</span>
+                        <span class="tag">MQTT</span>
                     </div>
                 </div>
-            </a>
-            
-            <a href="projekt1_strona_internetowa.html" style="text-decoration: none;">
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3 data-translate="portfolio.projects.nowadroga.title">Strona internetowa poradni terapeutycznej</h3>
-                        <p data-translate="portfolio.projects.nowadroga.description">Profesjonalna strona internetowa dla Poradni Leczenia Uzależnień i Współuzależnień w Barlinku</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML/CSS</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Responsive Design</span>
-                        </div>
+                <div class="project-links">
+                    <a href="automation_dust_collector.html" class="project-link link-details" data-translate="portfolio.projects.blastgate.details">Szczegóły</a>
+                    <a href="#" class="project-link link-repo" data-project="blastgate" data-link="repo" style="display: none;">Repo</a>
+                    <a href="#" class="project-link link-live" data-project="blastgate" data-link="live" style="display: none;">Live</a>
+                </div>
+            </div>
+            <div class="project-card" data-project="nowadroga">
+                <div class="project-content">
+                    <h3 data-translate="portfolio.projects.nowadroga.title">Strona poradni terapeutycznej</h3>
+                    <p data-translate="portfolio.projects.nowadroga.description">Strona poradni w Barlinku: responsywny layout, formularz kontaktowy.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Responsive Design</span>
                     </div>
                 </div>
-            </a>
-            <!-- Więcej projektów... -->
+                <div class="project-links">
+                    <a href="strona_internetowa_poradni.html" class="project-link link-details" data-translate="portfolio.projects.nowadroga.details">Szczegóły</a>
+                    <a href="#" class="project-link link-repo" data-project="nowadroga" data-link="repo" style="display: none;">Repo</a>
+                    <a href="#" class="project-link link-live" data-project="nowadroga" data-link="live" style="display: none;">Live</a>
+                </div>
+            </div>
+            <div class="project-card" data-project="gooseproduction">
+                <div class="project-content">
+                    <h3 data-translate="portfolio.projects.gooseproduction.title">Goose Production – pipeline treści</h3>
+                    <p data-translate="portfolio.projects.gooseproduction.description">n8n: zbieranie trendów z 4 źródeł (Google Trends, YouTube, News, Reddit), ranking przez agenta AI, generowanie strategii treści do wideo.</p>
+                    <div class="project-tags">
+                        <span class="tag">n8n</span>
+                        <span class="tag">Google Sheets</span>
+                        <span class="tag">AI / LLM</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="goose_production.html" class="project-link link-details" data-translate="portfolio.projects.gooseproduction.details">Szczegóły</a>
+                    <a href="#" class="project-link link-repo" data-project="gooseproduction" data-link="repo" style="display: none;">Repo</a>
+                    <a href="#" class="project-link link-live" data-project="gooseproduction" data-link="live" style="display: none;">Live</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -129,15 +132,15 @@
         
         <div class="stats">
             <div class="stat">
-                <span class="stat-number">4+</span>
+                <span class="stat-number">5+</span>
                 <span class="stat-label" data-translate="about.stats.years">Lata doświadczenia</span>
             </div>
             <div class="stat">
-                <span class="stat-number">90+</span>
+                <span class="stat-number">120+</span>
                 <span class="stat-label" data-translate="about.stats.projects">Zrealizowanych projektów</span>
             </div>
             <div class="stat">
-                <span class="stat-number">60+</span>
+                <span class="stat-number">70+</span>
                 <span class="stat-label" data-translate="about.stats.clients">Zadowolonych klientów</span>
             </div>
         </div>
@@ -149,51 +152,27 @@
         
         <div class="testimonials-grid">
             <div class="testimonial-card">
-                <p class="testimonial-text" data-translate="testimonials.testimonials.0.text">Casper wykonał WYJĄTKOWĄ pracę przy moim projekcie! Jego kod był dopracowany, wolny od błędów i pokazał jego głęboką wiedzę. Co więcej, szybka realizacja i duch współpracy sprawiły, że praca z nim była przyjemnością.</p>
+                <p class="testimonial-text" data-translate="testimonials.list.0.text">Casper wykonał WYJĄTKOWĄ pracę przy moim projekcie! Jego kod był dopracowany, wolny od błędów i pokazał jego głęboką wiedzę. Co więcej, szybka realizacja i duch współpracy sprawiły, że praca z nim była przyjemnością.</p>
                 <div class="testimonial-author">
-                    <h3 data-translate="testimonials.testimonials.0.author">Johann Schwarz</h3>
-                    <p data-translate="testimonials.testimonials.0.position">Niemcy</p>
+                    <h3 data-translate="testimonials.list.0.author">Johann Schwarz</h3>
+                    <p data-translate="testimonials.list.0.position">Niemcy</p>
                 </div>
             </div>
 
             <div class="testimonial-card">
-                <p class="testimonial-text" data-translate="testimonials.testimonials.1.text">Casper jest fantastyczną osobą do współpracy! To, że jest tak młody, świadczy o tym, jak jest inteligentny i zdolny. Jestem pod wielkim wrażeniem poziomu jego pracy i profesjonalizmu. Gorąco polecam Caspera, jeśli szukasz dobrze wykonanej pracy przed terminem.</p>
+                <p class="testimonial-text" data-translate="testimonials.list.1.text">Casper jest fantastyczną osobą do współpracy! To, że jest tak młody, świadczy o tym, jak jest inteligentny i zdolny. Jestem pod wielkim wrażeniem poziomu jego pracy i profesjonalizmu. Gorąco polecam Caspera, jeśli szukasz dobrze wykonanej pracy przed terminem.</p>
                 <div class="testimonial-author">
-                    <h3 data-translate="testimonials.testimonials.1.author">Hansel Annie</h3>
-                    <p data-translate="testimonials.testimonials.1.position">Kanada</p>
+                    <h3 data-translate="testimonials.list.1.author">Hansel Annie</h3>
+                    <p data-translate="testimonials.list.1.position">Kanada</p>
                 </div>
             </div>
 
             <div class="testimonial-card">
-                <p class="testimonial-text" data-translate="testimonials.testimonials.2.text">Świetna współpraca, moje wymagania były trudne do wytłumaczenia, ale dzięki Casperowi osiągnęliśmy zamierzony rezultat. Dziękuję jeszcze raz</p>
+                <p class="testimonial-text" data-translate="testimonials.list.2.text">Świetna współpraca, moje wymagania były trudne do wytłumaczenia, ale dzięki Casperowi osiągnęliśmy zamierzony rezultat. Dziękuję jeszcze raz</p>
                 <div class="testimonial-author">
-                    <h3 data-translate="testimonials.testimonials.2.author">Roberto Buti</h3>
-                    <p data-translate="testimonials.testimonials.2.position">Włochy</p>
+                    <h3 data-translate="testimonials.list.2.author">Roberto Buti</h3>
+                    <p data-translate="testimonials.list.2.position">Włochy</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="why-me" class="why-me">
-        <h2 data-translate="whyMe.title">Dlaczego ja?</h2>
-        
-        <div class="features-grid">
-            <div class="feature">
-                <div class="feature-number" data-translate="whyMe.features.0.number">01</div>
-                <h3 data-translate="whyMe.features.0.title">Indywidualne podejście</h3>
-                <p data-translate="whyMe.features.0.description">Każdy projekt traktuję jako unikalne wyzwanie, dostosowując rozwiązania do konkretnych potrzeb klienta.</p>
-            </div>
-
-            <div class="feature">
-                <div class="feature-number" data-translate="whyMe.features.1.number">02</div>
-                <h3 data-translate="whyMe.features.1.title">Nowoczesne technologie</h3>
-                <p data-translate="whyMe.features.1.description">Wykorzystuję najnowsze narzędzia i frameworki, zapewniając wydajność i przyszłościowe rozwiązania.</p>
-            </div>
-
-            <div class="feature">
-                <div class="feature-number" data-translate="whyMe.features.2.number">03</div>
-                <h3 data-translate="whyMe.features.2.title">Terminowość</h3>
-                <p data-translate="whyMe.features.2.description">Projekty realizuję zgodnie z ustalonym harmonogramem, zapewniając regularną komunikację i aktualizacje.</p>
             </div>
         </div>
     </section>
@@ -204,12 +183,9 @@
         
         <div class="contact-form">
             <div class="contact-buttons">
-                <a href="mailto:kacperstefanski.kontakt@gmail.com" class="submit-btn" data-translate="contact.form.email">
-                    Napisz e-mail →
-                </a>
-                <a href="https://www.linkedin.com/in/kacper-stefa%C5%84ski-pl/" class="submit-btn" target="_blank" data-translate="contact.form.linkedin">
-                    LinkedIn →
-                </a>
+                <a href="mailto:kacperstefanski.kontakt@gmail.com" class="submit-btn" data-translate="contact.form.email">Napisz e-mail</a>
+                <button type="button" class="submit-btn btn-copy-email" data-translate="contact.form.copyEmail" data-email="kacperstefanski.kontakt@gmail.com">Skopiuj e-mail</button>
+                <a href="https://www.linkedin.com/in/kacper-stefa%C5%84ski-pl/" class="submit-btn" target="_blank" rel="noopener" data-translate="contact.form.linkedin">LinkedIn</a>
             </div>
         </div>
     </section>
@@ -217,7 +193,7 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-left">
-                <p class="copyright" data-translate="footer.copyright">© 2024 Kacper Stefański. Wszystkie prawa zastrzeżone.</p>
+                <p class="copyright" data-translate="footer.copyright">© 2025 Kacper Stefański. Wszystkie prawa zastrzeżone.</p>
             </div>
             <div class="footer-right">
                 <div class="social-links">
@@ -229,12 +205,8 @@
         </div>
     </footer>
 
-    <script src="translations.js"></script>
-    <script src="script.js"></script>
-    <script src="https://external-script.js" 
-        integrity="sha384-hash" 
-        crossorigin="anonymous">
-    </script>
+    <script src="js/i18n.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>

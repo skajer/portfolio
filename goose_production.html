@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goose Production – pipeline treści - Szczegóły projektu</title>
+    <link rel="icon" type="image/x-icon" href="favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="favicons/android-chrome-512x512.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project-details.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="project-container">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link" data-translate="nav.home">Strona główna</a>
+                    <a href="index.html#portfolio" class="nav-link" data-translate="nav.portfolio">Portfolio</a>
+                    <a href="index.html#about" class="nav-link" data-translate="nav.about">O mnie</a>
+                    <a href="index.html#opinie" class="nav-link" data-translate="nav.testimonials">Opinie</a>
+                    <a href="index.html#kontakt" class="nav-link" data-translate="nav.contact">Kontakt</a>
+                </div>
+                <div class="mobile-nav">
+                    <div class="lang-switcher">
+                        <button class="lang-btn active" data-lang="pl">PL</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                    <button class="menu-toggle" aria-label="Menu">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <main class="project-details">
+            <section class="project-hero">
+                <div class="project-header">
+                    <h1>Goose Production – pipeline treści</h1>
+                    <p class="project-subtitle">System n8n do zbierania trendów, rankingu tematów i generowania strategii treści pod wideo</p>
+                    <div class="project-tags">
+                        <span class="tag">n8n</span>
+                        <span class="tag">Google Sheets</span>
+                        <span class="tag">AI / LLM</span>
+                        <span class="tag">SerpAPI</span>
+                        <span class="tag">YouTube API</span>
+                        <span class="tag">Reddit</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-overview">
+                <h2 class="section-title" data-section="projectOverview">Przegląd projektu</h2>
+                <div class="overview-grid">
+                    <div class="overview-item">
+                        <h3 data-section="projectHistory">O projekcie</h3>
+                        <p data-translate="gooseproduction.historyPart1">Projekt to pipeline do produkcji treści wideo: dwa workflowy n8n. Pierwszy (Trend Engine v2) zbiera i normalizuje trendy z Google Trends, YouTube, Google News i Reddita na podstawie słów kluczowych z Google Sheets. Drugi (Topic Ranking Engine v1) pobiera surowe tematy, rankuje je przez agenta AI i generuje gotową strategię treści (tytuły, tekst miniaturki, skrypt) dla najlepszego tematu.</p>
+                        <p data-translate="gooseproduction.historyPart2">Dane płyną przez arkusze: raw_topics → ranked_topics → selected_topic. Wyzwalacze: harmonogram (np. co 3 dni) lub ręcznie. Modele AI (np. 4o-mini) można wymieniać pod kątem jakości i kosztów.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-features workflow-section">
+                <h2 class="section-title" data-section="trendEngine">Trend Engine v2</h2>
+                <p class="workflow-desc" data-translate="gooseproduction.trendEngineDesc">Odczytuje słowa kluczowe z Google Sheets i uruchamia cztery równoległe gałęzie (Google Trends, YouTube, Google News, Reddit). Każda gałąź iteruje po słowach, wywołuje odpowiednie API (SerpAPI, YouTube Search), normalizuje wyniki do wspólnego formatu i dopisuje rekordy do arkusza raw_topics (timestamp, source, topic, url, score 0–100, processed=false). Wyzwalacz: ręczny lub harmonogram (np. co 3 dni). Limity: SerpAPI 250/mies., filtry świeżości 2–3 dni dla YouTube/Reddit.</p>
+                <div class="diagram-content">
+                    <img src="PROJECTS/goose_production/trend_engine.png" alt="Diagram Trend Engine v2" loading="lazy">
+                    <a href="PROJECTS/goose_production/trend_engine.png" target="_blank" rel="noopener" class="diagram-button" data-translate="gooseproduction.viewDiagram">Zobacz pełny diagram</a>
+                </div>
+            </section>
+
+            <section class="project-features workflow-section">
+                <h2 class="section-title" data-section="topicRanking">Topic Ranking Engine v1</h2>
+                <p class="workflow-desc" data-translate="gooseproduction.topicRankingDesc">Pobiera nieprzetworzone rekordy z raw_topics (processed=false), filtruje po świeżości i wyniku, ważeniuje źródła. Agent 1 (ranking) dostaje 30–120 tematów i zwraca top 20 z ocenami (trend_strength, relevance, impact, competition, final_score) i uzasadnieniem; wynik zapisywany do ranked_topics, a rekordy oznaczane jako processed. Agent 2 (content) na podstawie ranked_topics generuje strategię: wybrany temat, pomysły na wideo, opcje tytułów, teksty miniatur (3–4 słowa, WIELKIE LITERY, max 25 znaków), pełny skrypt. Wynik z timestampem trafia do selected_topic.</p>
+                <div class="diagram-content">
+                    <img src="PROJECTS/goose_production/topic_ranking_engine.png" alt="Diagram Topic Ranking Engine v1" loading="lazy">
+                    <a href="PROJECTS/goose_production/topic_ranking_engine.png" target="_blank" rel="noopener" class="diagram-button" data-translate="gooseproduction.viewDiagram">Zobacz pełny diagram</a>
+                </div>
+            </section>
+
+            <section class="project-gallery">
+                <h2 class="section-title" data-section="workflowDiagrams">Diagramy workflow</h2>
+                <div class="gallery-grid">
+                    <img src="PROJECTS/goose_production/trend_engine.png" alt="Trend Engine v2" loading="lazy">
+                    <img src="PROJECTS/goose_production/topic_ranking_engine.png" alt="Topic Ranking Engine v1" loading="lazy">
+                </div>
+            </section>
+
+            <section class="project-overview">
+                <h2 class="section-title" data-section="dataFlow">Przepływ danych</h2>
+                <p class="workflow-desc" data-translate="gooseproduction.dataFlowText">Słowa kluczowe (Sheets) → Trend Engine → raw_topics → Topic Ranking Engine → ranked_topics → Agent 2 → selected_topic. Stack: n8n, Google Sheets, SerpAPI, YouTube API, Reddit, modele LLM (np. OpenAI 4o-mini).</p>
+            </section>
+
+            <section class="project-conclusions">
+                <h2 class="section-title" data-section="conclusions">Wnioski</h2>
+                <p class="workflow-desc" data-translate="gooseproduction.conclusionsText">Pipeline pokazuje połączenie zbierania danych z wielu źródeł, normalizacji, rankingu przez agenta AI i generowania gotowej strategii treści w jednym systemie n8n z przechowywaniem stanu w Google Sheets.</p>
+            </section>
+        </main>
+
+        <div class="lightbox">
+            <button class="lightbox-close">×</button>
+            <button class="lightbox-nav lightbox-prev">‹</button>
+            <button class="lightbox-nav lightbox-next">›</button>
+            <img src="" alt="Powiększone zdjęcie">
+        </div>
+
+        <script src="js/i18n.js"></script>
+        <script src="js/goose_production.js"></script>
+    </div>
+</body>
+</html>

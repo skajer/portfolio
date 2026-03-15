@@ -13,8 +13,8 @@
     <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="favicons/android-chrome-512x512.png">
     
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="project-details.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project-details.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
@@ -150,7 +150,7 @@
                 <h2 class="section-title" data-section="flowDiagram">Diagram przepływu</h2>
                 <div class="diagram-content">
                     <img src="PROJECTS/blastgate-automation/images/Blastgate-Mindmap-V4.jpg" alt="Diagram przepływu systemu automatyzacji">
-                    <button class="diagram-button" data-diagram="viewButton">Zobacz pełny diagram</button>
+                    <a href="PROJECTS/blastgate-automation/images/Blastgate-Mindmap-V4.jpg" target="_blank" rel="noopener" class="diagram-button" data-diagram="viewButton">Zobacz pełny diagram</a>
                     <p class="diagram-description" data-diagram="description">
                         Diagram przedstawia logikę działania systemu, włączając wszystkie stany i przejścia między nimi.
                     </p>
@@ -268,7 +268,8 @@ function VoltageAnomaly(msg) {
             </div>
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-            <script src="project-details.js"></script>
+            <script src="js/i18n.js"></script>
+            <script src="js/project-details.js"></script>
         </div>
     </body>
 </html> 
