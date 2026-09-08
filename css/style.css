@@ -27,6 +27,7 @@ body {
     background: var(--background-dark);
     margin: 0;
     position: relative;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -390,14 +391,21 @@ body {
     background: var(--card-background);
     border-radius: 6px;
     padding: 2rem;
-    transition: all 0.3s ease;
-    border: 1px solid transparent;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.project-card:hover {
+a.project-card-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.project-card:hover,
+a.project-card-link:hover {
     border-color: var(--accent-color);
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(27, 192, 221, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(27, 192, 221, 0.15);
 }
 
 .project-content {
@@ -680,12 +688,39 @@ body {
     color: var(--text-primary);
 }
 
-.about p {
-    font-size: 1.2rem;
-    line-height: 1.6;
+.about-content {
+    max-width: 900px;
+}
+
+.about-content p {
+    font-size: 1.15rem;
+    line-height: 1.75;
     color: var(--text-secondary);
-    margin-bottom: 3rem;
-    max-width: 800px;
+    margin-bottom: 1.25rem;
+}
+
+.about-list {
+    list-style: none;
+    margin: 0 0 1.5rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about-list li {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    padding: 1rem 1.25rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+}
+
+.about-list li strong {
+    color: var(--text-primary);
+    font-weight: 600;
 }
 
 .stats {
@@ -717,6 +752,13 @@ body {
     }
     .about h2 {
         font-size: 2.5rem;
+    }
+    .about-content p {
+        font-size: 1rem;
+    }
+    .about-list li {
+        font-size: 0.95rem;
+        padding: 0.875rem 1rem;
     }
     .stats {
         flex-direction: column;

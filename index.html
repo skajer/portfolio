@@ -3,16 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kacper Stefański | Developer</title>
-    
-    <!-- Favicons -->
+    <title>Kacper Stefański | Inżynier Automatyki Przemysłowej & AI</title>
+    <meta name="description" content="Automatyka przemysłowa (IIoT), Node-RED, Modbus, Grafana, n8n oraz agenci AI (MCP). Integracja sensorów, wizualizacja danych produkcyjnych i automatyzacja procesów.">
+    <meta name="author" content="Kacper Stefański">
+    <link rel="canonical" href="https://skajer.github.io/portfolio/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skajer.github.io/portfolio/">
+    <meta property="og:title" content="Kacper Stefański | Inżynier Automatyki Przemysłowej & AI">
+    <meta property="og:description" content="Automatyka przemysłowa (IIoT), Node-RED, Modbus, Grafana, n8n oraz agenci AI (MCP).">
+    <meta property="og:image" content="https://skajer.github.io/portfolio/favicons/android-chrome-512x512.png">
+    <meta property="og:locale" content="pl_PL">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Kacper Stefański | Inżynier Automatyki Przemysłowej & AI">
+    <meta name="twitter:description" content="Automatyka przemysłowa, IIoT, Node-RED, Grafana, n8n i agenci AI.">
+    <meta name="twitter:image" content="https://skajer.github.io/portfolio/favicons/android-chrome-512x512.png">
+
     <link rel="icon" type="image/x-icon" href="favicons/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="favicons/android-chrome-512x512.png">
-    
+    <link rel="manifest" href="favicons/site.webmanifest">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,18 +41,14 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-menu">
-                <a href="#" class="nav-link active" data-translate="nav.home">Strona główna</a>
+                <a href="#hero" class="nav-link active" data-translate="nav.home">Strona główna</a>
                 <a href="#portfolio" class="nav-link" data-translate="nav.portfolio">Portfolio</a>
                 <a href="#about" class="nav-link" data-translate="nav.about">O mnie</a>
                 <a href="#opinie" class="nav-link" data-translate="nav.testimonials">Opinie</a>
                 <a href="#kontakt" class="nav-link" data-translate="nav.contact">Kontakt</a>
             </div>
             <div class="mobile-nav">
-                <div class="lang-switcher">
-                    <button class="lang-btn active" data-lang="pl">PL</button>
-                    <button class="lang-btn" data-lang="en">EN</button>
-                </div>
-                <button class="menu-toggle" aria-label="Menu">
+                <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="3" y1="12" x2="21" y2="12"></line>
                         <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -52,11 +63,11 @@
         <div class="hero-content">
             <div class="hero-left">
                 <h1><span data-translate="hero.title">Cześć, jestem</span> <br><span data-translate="hero.name">Kacper</span><span class="cursor">|</span></h1>
-                <p class="subtitle" data-translate="hero.subtitle">AI & Automation Builder | Node-RED · n8n</p>
+                <p class="subtitle" data-translate="hero.subtitle">Industrial Automation &amp; AI Engineer | Node-RED · Modbus/IoT · Grafana · n8n &amp; MCP AI Agents</p>
                 <div class="hero-links">
-                    <a href="#kontakt" class="cta-button" data-translate="hero.cta">Umów się na spotkanie 💻</a>
-                    <a href="https://github.com/skajer" class="social-link">GitHub</a>
-                    <a href="https://www.fiverr.com/skajerr" class="social-link">Fiverr</a>
+                    <a href="#kontakt" class="cta-button" data-translate="hero.cta">Napisz do mnie</a>
+                    <a href="https://github.com/skajer" class="social-link" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.fiverr.com/skajerr" class="social-link" target="_blank" rel="noopener">Fiverr</a>
                 </div>
             </div>
             <div class="hero-right">
@@ -75,10 +86,10 @@
     <section id="portfolio" class="portfolio">
         <h2 data-translate="portfolio.title">Portfolio</h2>
         <div class="projects-grid">
-            <div class="project-card" data-project="blastgate">
+            <a href="automation_dust_collector.html" class="project-card project-card-link" data-project="blastgate">
                 <div class="project-content">
                     <h3 data-translate="portfolio.projects.blastgate.title">System automatyzacji odciągu wiórów</h3>
-                    <p data-translate="portfolio.projects.blastgate.description">Sterowanie przepustnicami odciągu w Node-RED na RPi.</p>
+                    <p data-translate="portfolio.projects.blastgate.description">Sterowanie przepustnicami odciągu w Node-RED na RPi. Czujniki prądu, stany maszyn i bufor pomiarów eliminujący fałszywe odczyty.</p>
                     <div class="project-tags">
                         <span class="tag">Raspberry Pi</span>
                         <span class="tag">Node-RED</span>
@@ -86,15 +97,13 @@
                     </div>
                 </div>
                 <div class="project-links">
-                    <a href="automation_dust_collector.html" class="project-link link-details" data-translate="portfolio.projects.blastgate.details">Szczegóły</a>
-                    <a href="#" class="project-link link-repo" data-project="blastgate" data-link="repo" style="display: none;">Repo</a>
-                    <a href="#" class="project-link link-live" data-project="blastgate" data-link="live" style="display: none;">Live</a>
+                    <span class="project-link link-details" data-translate="portfolio.projects.blastgate.details">Szczegóły →</span>
                 </div>
-            </div>
-            <div class="project-card" data-project="nowadroga">
+            </a>
+            <a href="strona_internetowa_poradni.html" class="project-card project-card-link" data-project="nowadroga">
                 <div class="project-content">
                     <h3 data-translate="portfolio.projects.nowadroga.title">Strona poradni terapeutycznej</h3>
-                    <p data-translate="portfolio.projects.nowadroga.description">Strona poradni w Barlinku: responsywny layout, formularz kontaktowy.</p>
+                    <p data-translate="portfolio.projects.nowadroga.description">Responsywna witryna z formularzem kontaktowym, optymalizacją mobile-first i podstawowym SEO.</p>
                     <div class="project-tags">
                         <span class="tag">HTML/CSS</span>
                         <span class="tag">JavaScript</span>
@@ -102,15 +111,13 @@
                     </div>
                 </div>
                 <div class="project-links">
-                    <a href="strona_internetowa_poradni.html" class="project-link link-details" data-translate="portfolio.projects.nowadroga.details">Szczegóły</a>
-                    <a href="#" class="project-link link-repo" data-project="nowadroga" data-link="repo" style="display: none;">Repo</a>
-                    <a href="#" class="project-link link-live" data-project="nowadroga" data-link="live" style="display: none;">Live</a>
+                    <span class="project-link link-details" data-translate="portfolio.projects.nowadroga.details">Szczegóły →</span>
                 </div>
-            </div>
-            <div class="project-card" data-project="gooseproduction">
+            </a>
+            <a href="goose_production.html" class="project-card project-card-link" data-project="gooseproduction">
                 <div class="project-content">
                     <h3 data-translate="portfolio.projects.gooseproduction.title">Goose Production – pipeline treści</h3>
-                    <p data-translate="portfolio.projects.gooseproduction.description">n8n: zbieranie trendów z 4 źródeł (Google Trends, YouTube, News, Reddit), ranking przez agenta AI, generowanie strategii treści do wideo.</p>
+                    <p data-translate="portfolio.projects.gooseproduction.description">n8n: agregacja trendów z 4 źródeł, ranking tematów przez agenta AI i generowanie strategii treści wideo.</p>
                     <div class="project-tags">
                         <span class="tag">n8n</span>
                         <span class="tag">Google Sheets</span>
@@ -118,22 +125,29 @@
                     </div>
                 </div>
                 <div class="project-links">
-                    <a href="goose_production.html" class="project-link link-details" data-translate="portfolio.projects.gooseproduction.details">Szczegóły</a>
-                    <a href="#" class="project-link link-repo" data-project="gooseproduction" data-link="repo" style="display: none;">Repo</a>
-                    <a href="#" class="project-link link-live" data-project="gooseproduction" data-link="live" style="display: none;">Live</a>
+                    <span class="project-link link-details" data-translate="portfolio.projects.gooseproduction.details">Szczegóły →</span>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
 
     <section id="about" class="about">
         <h2 data-translate="about.title">O mnie</h2>
-        <p data-translate="about.description">Jestem programistą specjalizującym się w tworzeniu nowoczesnych aplikacji webowych i automatyzacji procesów. Moje podejście skupia się na dostarczaniu efektywnych i skalowalnych rozwiązań.</p>
-        
+        <div class="about-content">
+            <p>Specjalizuję się w automatyzacji przemysłowej (IIoT), cyfryzacji procesów produkcyjnych oraz wdrażaniu nowoczesnych systemów AI.</p>
+            <p>Łączę świat sprzętu przemysłowego z nowoczesnym oprogramowaniem:</p>
+            <ul class="about-list">
+                <li><strong>Industrial IoT &amp; Node-RED:</strong> Bogate doświadczenie w pracy z istniejącymi oraz nowymi przepływami Node-RED, integracji urządzeń pomiarowych, sensorów oraz protokołów przemysłowych (Modbus RTU/TCP, Serial/COM, MQTT, TCP/IP).</li>
+                <li><strong>Wizualizacja i analityka:</strong> Buduję stabilne systemy kontroli jakości (SPC) oraz dashboardy w Grafanie do wizualizacji danych pomiarowych w czasie rzeczywistym — bezpośrednio na halach produkcyjnych.</li>
+                <li><strong>Agentic AI &amp; MCP:</strong> Wykorzystuję n8n, protokół MCP (Model Context Protocol) oraz agentów LLM do automatyzacji skomplikowanych procesów biznesowych i analitycznych.</li>
+            </ul>
+            <p>Niezależnie od tego, czy chodzi o audyt i naprawę istniejącej infrastruktury Node-RED, podłączenie mikrometrów i czujników pneumatycznych, czy zbudowanie od zera agenta AI — dostarczam niezawodne, skalowalne i przetestowane w boju rozwiązania.</p>
+        </div>
+
         <div class="stats">
             <div class="stat">
                 <span class="stat-number">5+</span>
-                <span class="stat-label" data-translate="about.stats.years">Lata doświadczenia</span>
+                <span class="stat-label" data-translate="about.stats.years">Lat doświadczenia</span>
             </div>
             <div class="stat">
                 <span class="stat-number">120+</span>
@@ -149,10 +163,10 @@
     <section id="opinie" class="testimonials">
         <h2 data-translate="testimonials.title">Co mówią klienci</h2>
         <p class="section-subtitle" data-translate="testimonials.subtitle">Opinie osób, z którymi miałem przyjemność współpracować</p>
-        
+
         <div class="testimonials-grid">
             <div class="testimonial-card">
-                <p class="testimonial-text" data-translate="testimonials.list.0.text">Casper wykonał WYJĄTKOWĄ pracę przy moim projekcie! Jego kod był dopracowany, wolny od błędów i pokazał jego głęboką wiedzę. Co więcej, szybka realizacja i duch współpracy sprawiły, że praca z nim była przyjemnością.</p>
+                <p class="testimonial-text" data-translate="testimonials.list.0.text">Kacper wykonał wyjątkową pracę przy moim projekcie. Kod był dopracowany, wolny od błędów i pokazał głęboką wiedzę techniczną. Szybka realizacja i świetna komunikacja sprawiły, że współpraca była czystą przyjemnością.</p>
                 <div class="testimonial-author">
                     <h3 data-translate="testimonials.list.0.author">Johann Schwarz</h3>
                     <p data-translate="testimonials.list.0.position">Niemcy</p>
@@ -160,7 +174,7 @@
             </div>
 
             <div class="testimonial-card">
-                <p class="testimonial-text" data-translate="testimonials.list.1.text">Casper jest fantastyczną osobą do współpracy! To, że jest tak młody, świadczy o tym, jak jest inteligentny i zdolny. Jestem pod wielkim wrażeniem poziomu jego pracy i profesjonalizmu. Gorąco polecam Caspera, jeśli szukasz dobrze wykonanej pracy przed terminem.</p>
+                <p class="testimonial-text" data-translate="testimonials.list.1.text">Kacper to fantastyczny partner do współpracy. Jego profesjonalizm, terminowość i jakość kodu robią wrażenie. Gorąco polecam — jeśli szukasz solidnie wykonanej pracy przed terminem, to właściwy wybór.</p>
                 <div class="testimonial-author">
                     <h3 data-translate="testimonials.list.1.author">Hansel Annie</h3>
                     <p data-translate="testimonials.list.1.position">Kanada</p>
@@ -168,7 +182,7 @@
             </div>
 
             <div class="testimonial-card">
-                <p class="testimonial-text" data-translate="testimonials.list.2.text">Świetna współpraca, moje wymagania były trudne do wytłumaczenia, ale dzięki Casperowi osiągnęliśmy zamierzony rezultat. Dziękuję jeszcze raz</p>
+                <p class="testimonial-text" data-translate="testimonials.list.2.text">Świetna współpraca. Moje wymagania były trudne do opisania, ale dzięki Kacperowi osiągnęliśmy zamierzony efekt. Dziękuję jeszcze raz.</p>
                 <div class="testimonial-author">
                     <h3 data-translate="testimonials.list.2.author">Roberto Buti</h3>
                     <p data-translate="testimonials.list.2.position">Włochy</p>
@@ -178,14 +192,15 @@
     </section>
 
     <section id="kontakt" class="contact">
-        <h2 data-translate="contact.title">Skontaktuj się ze mną</h2>
-        <p class="section-subtitle" data-translate="contact.subtitle">Porozmawiajmy o Twoim projekcie. Napisz do mnie bezpośrednio.</p>
-        
+        <h2 data-translate="contact.title">Kontakt</h2>
+        <p class="section-subtitle" data-translate="contact.subtitle">Opisz swój projekt — odpowiem bezpośrednio na maila lub przez wybrany kanał.</p>
+
         <div class="contact-form">
             <div class="contact-buttons">
                 <a href="mailto:kacperstefanski.kontakt@gmail.com" class="submit-btn" data-translate="contact.form.email">Napisz e-mail</a>
-                <button type="button" class="submit-btn btn-copy-email" data-translate="contact.form.copyEmail" data-email="kacperstefanski.kontakt@gmail.com">Skopiuj e-mail</button>
+                <a href="https://www.fiverr.com/skajerr" class="submit-btn" target="_blank" rel="noopener" data-translate="contact.form.fiverr">Fiverr</a>
                 <a href="https://www.linkedin.com/in/kacper-stefa%C5%84ski-pl/" class="submit-btn" target="_blank" rel="noopener" data-translate="contact.form.linkedin">LinkedIn</a>
+                <a href="https://github.com/skajer" class="submit-btn" target="_blank" rel="noopener" data-translate="contact.form.github">GitHub</a>
             </div>
         </div>
     </section>
@@ -193,12 +208,13 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-left">
-                <p class="copyright" data-translate="footer.copyright">© 2025 Kacper Stefański. Wszystkie prawa zastrzeżone.</p>
+                <p class="copyright" data-translate="footer.copyright">© 2026 Kacper Stefański. Wszystkie prawa zastrzeżone.</p>
             </div>
             <div class="footer-right">
                 <div class="social-links">
-                    <a href="https://github.com/skajer" target="_blank" class="social-link">GitHub</a>
-                    <a href="https://www.linkedin.com/in/kacper-stefa%C5%84ski-pl/" target="_blank" class="social-link">LinkedIn</a>
+                    <a href="https://github.com/skajer" target="_blank" rel="noopener" class="social-link">GitHub</a>
+                    <a href="https://www.linkedin.com/in/kacper-stefa%C5%84ski-pl/" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
+                    <a href="https://www.fiverr.com/skajerr" target="_blank" rel="noopener" class="social-link">Fiverr</a>
                     <a href="mailto:kacperstefanski.kontakt@gmail.com" class="social-link">Email</a>
                 </div>
             </div>
