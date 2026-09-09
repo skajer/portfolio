@@ -3,11 +3,17 @@
     --font-secondary: 'Poppins', sans-serif;
 }
 
+.project-container {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 .project-details {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
     font-family: var(--font-secondary);
+    overflow-x: hidden;
 }
 
 .project-hero {
@@ -434,14 +440,138 @@ section h2 {
 }
 
 @media (max-width: 768px) {
-    .project-header h1 { font-size: 3rem; }
-    .project-subtitle { font-size: 1.1rem; }
-    section { margin: 4rem 0; }
-    section h2 { font-size: 2.2rem; }
-    .components-grid { grid-template-columns: 1fr; }
-    .conclusion-item h3 { font-size: 1.4rem; }
-    .overview-item h3 { font-size: 1.5rem; }
-    .overview-item p { font-size: 1rem; }
+    .project-details {
+        padding: 1rem;
+    }
+
+    .project-hero {
+        min-height: auto;
+        padding: 5.5rem 0.75rem 2rem;
+    }
+
+    .project-header h1 {
+        font-size: 1.65rem;
+        line-height: 1.25;
+        word-wrap: break-word;
+        overflow-wrap: anywhere;
+    }
+
+    .project-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        padding: 0;
+    }
+
+    .project-tags {
+        gap: 0.5rem;
+    }
+
+    .tag {
+        font-size: 0.85rem;
+        padding: 0.45rem 0.85rem;
+    }
+
+    .project-stats {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.65rem;
+        width: 100%;
+    }
+
+    .stat-item {
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    section {
+        margin: 2.5rem 0;
+    }
+
+    section h2,
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.25;
+    }
+
+    .components-grid,
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .component-card,
+    .feature-card,
+    .overview-item,
+    .conclusion-item {
+        padding: 1.25rem;
+    }
+
+    .conclusion-item h3 { font-size: 1.2rem; }
+    .overview-item h3 { font-size: 1.3rem; }
+    .overview-item p,
+    .conclusion-item p,
+    .workflow-desc {
+        font-size: 0.95rem;
+        line-height: 1.65;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .gallery-grid img {
+        height: auto;
+        min-height: 0;
+        max-height: none;
+    }
+
+    .diagram-content img {
+        width: 100%;
+        height: auto;
+    }
+
+    .diagram-button {
+        display: block;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .code-example pre {
+        overflow-x: auto;
+        max-width: 100%;
+        font-size: 0.8rem;
+    }
+
+    .code-example pre code {
+        white-space: pre;
+        word-break: normal;
+    }
+
+    .lightbox {
+        padding: 1rem;
+    }
+
+    .lightbox-nav {
+        font-size: 2rem;
+        padding: 0.5rem;
+    }
+
+    .navbar {
+        padding: 0.75rem 1rem;
+    }
+
+    .nav-container {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .mobile-nav {
+        display: flex;
+    }
 }
 
 .section-title {

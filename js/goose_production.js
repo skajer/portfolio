@@ -1,5 +1,5 @@
 (function () {
-    document.addEventListener("DOMContentLoaded", function () {
+    function initPage() {
         var lightbox = document.querySelector(".lightbox");
         if (lightbox) {
             var img = lightbox.querySelector("img");
@@ -45,29 +45,24 @@
             });
         }
 
-        var saved = "pl";
-        try { saved = localStorage.getItem("selectedLanguage") || "pl"; } catch (e) {}
-        var lang = (saved === "en" || saved === "pl") ? saved : "pl";
-        if (window.applyTranslations) window.applyTranslations(lang, "gooseproduction");
-
-        document.querySelectorAll(".lang-btn").forEach(function (btn) {
-            btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
-            btn.addEventListener("click", function () {
-                var l = btn.getAttribute("data-lang");
-                if (l !== "pl" && l !== "en") return;
-                document.querySelectorAll(".lang-btn").forEach(function (b) { b.classList.remove("active"); });
-                btn.classList.add("active");
-                if (window.applyTranslations) window.applyTranslations(l, "gooseproduction");
-            });
-        });
+        if (window.applyTranslations) window.applyTranslations("gooseproduction");
 
         var toggle = document.querySelector(".menu-toggle");
         var menu = document.querySelector(".nav-menu");
         if (toggle && menu) {
-            toggle.addEventListener("click", function () { menu.classList.toggle("active"); });
+            toggle.addEventListener("click", function () {
+                var open = menu.classList.toggle("active");
+                toggle.setAttribute("aria-expanded", open ? "true" : "false");
+            });
             document.querySelectorAll(".nav-link").forEach(function (link) {
-                link.addEventListener("click", function () { menu.classList.remove("active"); });
+                link.addEventListener("click", function () {
+                    menu.classList.remove("active");
+                    toggle.setAttribute("aria-expanded", "false");
+                });
             });
         }
-    });
+    }
+
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initPage);
+    else initPage();
 })();
