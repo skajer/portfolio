@@ -1,199 +1,199 @@
 window.I18N = {
     nav: {
-        home: "Strona główna",
+        home: "Home",
         portfolio: "Portfolio",
-        about: "O mnie",
-        testimonials: "Opinie",
-        contact: "Kontakt"
+        about: "About",
+        testimonials: "Testimonials",
+        contact: "Contact"
     },
     hero: {
-        title: "Cześć, jestem",
+        title: "Hi, I'm",
         name: "Kacper",
         subtitle: "Industrial Automation & AI Engineer | Node-RED · Modbus/IoT · Grafana · n8n & MCP AI Agents",
-        cta: "Napisz do mnie"
+        cta: "Get in touch"
     },
     portfolio: {
         title: "Portfolio",
         projects: {
             blastgate: {
-                title: "System automatyzacji odciągu wiórów",
-                description: "Sterowanie przepustnicami odciągu w Node-RED na RPi. Czujniki prądu, stany maszyn i bufor pomiarów eliminujący fałszywe odczyty.",
-                details: "Szczegóły →"
+                title: "Dust collection automation",
+                description: "Damper control in Node-RED on RPi. Current sensors, machine states, and a measurement buffer to eliminate false readings.",
+                details: "Details →"
             },
             nowadroga: {
-                title: "Strona poradni terapeutycznej",
-                description: "Responsywna witryna z formularzem kontaktowym, optymalizacją mobile-first i podstawowym SEO.",
-                details: "Szczegóły →"
+                title: "Therapy center website",
+                description: "Responsive site with contact form, mobile-first layout, and basic SEO optimization.",
+                details: "Details →"
             },
             gooseproduction: {
-                title: "Goose Production – pipeline treści",
-                description: "n8n: agregacja trendów z 4 źródeł, ranking tematów przez agenta AI i generowanie strategii treści wideo.",
-                details: "Szczegóły →"
+                title: "Goose Production – content pipeline",
+                description: "n8n: trend aggregation from 4 sources, AI agent topic ranking, and video content strategy generation.",
+                details: "Details →"
             }
         }
     },
     about: {
-        title: "O mnie",
+        title: "About me",
         stats: {
-            years: "Lat doświadczenia",
-            projects: "Zrealizowanych projektów",
-            clients: "Zadowolonych klientów"
+            years: "Years of experience",
+            projects: "Completed projects",
+            clients: "Satisfied clients"
         }
     },
     testimonials: {
-        title: "Co mówią klienci",
-        subtitle: "Opinie osób, z którymi miałem przyjemność współpracować",
+        title: "What clients say",
+        subtitle: "Testimonials from people I had the pleasure to work with",
         list: [
             {
-                text: "Kacper wykonał wyjątkową pracę przy moim projekcie. Kod był dopracowany, wolny od błędów i pokazał głęboką wiedzę techniczną. Szybka realizacja i świetna komunikacja sprawiły, że współpraca była czystą przyjemnością.",
+                text: "Casper did an exceptional job on my project. His code was polished, bug-free, and showed deep technical knowledge. Fast delivery and great communication made working with him a pleasure.",
                 author: "Johann Schwarz",
-                position: "Niemcy"
+                position: "Germany"
             },
             {
-                text: "Kacper to fantastyczny partner do współpracy. Jego profesjonalizm, terminowość i jakość kodu robią wrażenie. Gorąco polecam — jeśli szukasz solidnie wykonanej pracy przed terminem, to właściwy wybór.",
+                text: "Casper is a fantastic partner to work with. His professionalism, timeliness, and code quality are impressive. Highly recommended if you need solid work delivered before the deadline.",
                 author: "Hansel Annie",
-                position: "Kanada"
+                position: "Canada"
             },
             {
-                text: "Świetna współpraca. Moje wymagania były trudne do opisania, ale dzięki Kacperowi osiągnęliśmy zamierzony efekt. Dziękuję jeszcze raz.",
+                text: "Great collaboration. My requirements were difficult to explain, but thanks to Casper we achieved the intended result. Thank you again.",
                 author: "Roberto Buti",
-                position: "Włochy"
+                position: "Italy"
             }
         ]
     },
     contact: {
-        title: "Kontakt",
-        subtitle: "Opisz swój projekt — odpowiem bezpośrednio na maila lub przez wybrany kanał.",
+        title: "Contact",
+        subtitle: "Describe your project — I'll respond directly via email or your preferred channel.",
         form: {
-            email: "Napisz e-mail",
+            email: "Send email",
             fiverr: "Fiverr",
             linkedin: "LinkedIn",
             github: "GitHub"
         }
     },
     footer: {
-        copyright: "© 2026 Kacper Stefański. Wszystkie prawa zastrzeżone."
+        copyright: "© 2026 Kacper Stefański. All rights reserved."
     },
     blastgate: {
-        title: "System automatyzacji odciągu wiórów",
-        subtitle: "Inteligentne sterowanie przepustnicami w instalacji odciągu wiórów",
-        tags: { automation: "Automatyka", nodeRed: "Node-RED", rpi: "Raspberry Pi" },
+        title: "Dust Collection System Automation",
+        subtitle: "Intelligent damper control for a workshop dust extraction system",
+        tags: { automation: "Automation", nodeRed: "Node-RED", rpi: "Raspberry Pi" },
         projectHistory: {
-            title: "Historia projektu",
-            part1: "Projekt rozpoczął się od zlecenia na Fiverr — klient poszukiwał specjalisty od automatyki. Infrastruktura sprzętowa (odciąg wiórów z serwo-przepustnicami) była gotowa, brakowało natomiast logiki sterowania.",
-            part2: "Po analizie potrzeb wybraliśmy Node-RED ze względu na elastyczność, szybkie prototypowanie i łatwą integrację z MQTT oraz czujnikami prądu."
+            title: "Project history",
+            part1: "The project started with a Fiverr request — the client needed an automation specialist. The hardware (dust extraction with servo-controlled dampers) was ready; the control logic was not.",
+            part2: "After a needs analysis, we chose Node-RED for its flexibility, rapid prototyping, and easy integration with MQTT and current sensors."
         },
         components: {
-            mainController: { title: "Sterownik główny", desc: "Raspberry Pi 4 z Node-RED do zarządzania całym systemem" },
-            dampers: { title: "Przepustnice", desc: "3 automatyczne przepustnice z siłownikami 24 V" },
-            sensors: { title: "Czujniki", desc: "Sensory prądu do wykrywania stanu maszyn" },
-            interface: { title: "Interfejs", desc: "Panel sterowania z wyświetlaczem LCD i przyciskami" },
-            power: { title: "Zasilanie", desc: "Redundantny układ zasilania z UPS" },
-            safety: { title: "Bezpieczeństwo", desc: "Zabezpieczenia i monitoring ciśnienia" }
+            mainController: { title: "Main controller", desc: "Raspberry Pi 4 with Node-RED for system management" },
+            dampers: { title: "Dampers", desc: "3 automatic dampers with 24 V actuators" },
+            sensors: { title: "Sensors", desc: "Current sensors for machine state detection" },
+            interface: { title: "Interface", desc: "Control panel with LCD display and buttons" },
+            power: { title: "Power supply", desc: "Redundant power system with UPS" },
+            safety: { title: "Safety", desc: "Safety interlocks and pressure monitoring" }
         },
         troubleshooting: {
-            title: "Problem i rozwiązanie",
-            problem: "Podczas testów pojawiły się fałszywe odczyty z czujników prądu — krótkie spadki napięcia były interpretowane jako wyłączenie maszyny, co prowadziło do błędnego sterowania przepustnicami.",
-            solution: "Wprowadziliśmy bufor pomiarów i algorytm wykrywania anomalii, który:",
+            title: "Problem and solution",
+            problem: "During testing, false readings from current sensors appeared — brief voltage drops were interpreted as machine shutdown, causing incorrect damper switching.",
+            solution: "We introduced a measurement buffer and anomaly detection algorithm that:",
             steps: [
-                "Przechowuje historię trzech ostatnich pomiarów",
-                "Oblicza średnią z dwóch poprzednich odczytów",
-                "Porównuje bieżący wynik ze średnią",
-                "Odrzuca podejrzane odczyty przy zbyt dużej różnicy"
+                "Stores the last three measurements",
+                "Calculates the average of the two previous readings",
+                "Compares the current value against that average",
+                "Rejects suspicious readings when the difference is too large"
             ],
-            implementation: "Rozwiązanie wyeliminowało fałszywe przełączenia przepustnic i znacząco poprawiło stabilność systemu."
+            implementation: "This eliminated false damper switching and significantly improved system stability."
         },
         conclusions: {
-            implementation: { title: "Skuteczna implementacja złożonej logiki", description: "Mimo rozbudowanego diagramu stanów udało się przenieść całą logikę do Node-RED w czytelny i łatwy w utrzymaniu sposób." },
-            documentation: { title: "Dokumentacja techniczna", description: "Diagramy przepływu, opisy stanów i komentarze w kodzie ułatwiają dalszy rozwój i serwis systemu." },
-            nextStep: { title: "Kolejny krok w automatyce", description: "Doświadczenie z tego projektu stanowi solidną bazę pod kolejne wdrożenia automatyki przemysłowej i IIoT." },
+            implementation: { title: "Effective implementation of complex logic", description: "Despite a large state diagram, the full control logic was implemented in Node-RED in a clear, maintainable way." },
+            documentation: { title: "Technical documentation", description: "Flow diagrams, state descriptions, and code comments make future development and maintenance straightforward." },
+            nextStep: { title: "Next step in automation", description: "This project provides a solid foundation for future industrial automation and IIoT deployments." },
             keyAchievements: {
-                title: "Kluczowe osiągnięcia:",
+                title: "Key achievements:",
                 points: [
-                    "Pełna automatyzacja systemu odciągu wiórów",
-                    "Kompletna dokumentacja techniczna",
-                    "Wydłużenie żywotności elementów dzięki optymalnemu sterowaniu"
+                    "Full automation of the dust collection system",
+                    "Complete technical documentation",
+                    "Extended component lifetime through optimal control"
                 ]
             }
         },
         achievements: {
             points: [
-                "Pełna automatyzacja systemu odciągu wiórów",
-                "Kompletna dokumentacja techniczna",
-                "Wydłużenie żywotności elementów dzięki optymalnemu sterowaniu"
+                "Full automation of the dust collection system",
+                "Complete technical documentation",
+                "Extended component lifetime through optimal control"
             ]
         },
         sections: {
-            projectOverview: "Przegląd projektu",
-            systemComponents: "Komponenty systemu",
-            mainFeatures: "Główne funkcje",
-            flowDiagram: "Diagram przepływu",
-            troubleshooting: "Kod | Problemy | Rozwiązania",
-            gallery: "Galeria",
-            conclusions: "Wnioski i rezultaty"
+            projectOverview: "Project overview",
+            systemComponents: "System components",
+            mainFeatures: "Main features",
+            flowDiagram: "Flow diagram",
+            troubleshooting: "Code | Issues | Solutions",
+            gallery: "Gallery",
+            conclusions: "Conclusions and results"
         },
         mainFeatures: {
-            automaticControl: { title: "Sterowanie automatyczne", desc: "System wykrywa stan maszyn i dostosowuje przepustnice bez interwencji operatora." },
-            manualControl: { title: "Sterowanie ręczne", desc: "Możliwość ręcznego sterowania przepustnicami z panelu." },
-            safetyDelays: { title: "Opóźnienia bezpieczeństwa", desc: "Wbudowane opóźnienia czasowe zapewniają bezpieczne przejścia między stanami." }
+            automaticControl: { title: "Automatic control", desc: "The system detects machine states and adjusts dampers without operator intervention." },
+            manualControl: { title: "Manual control", desc: "Operators can override dampers from the control panel." },
+            safetyDelays: { title: "Safety delays", desc: "Built-in time delays ensure safe transitions between states." }
         },
         diagram: {
-            viewButton: "Zobacz pełny diagram",
-            description: "Diagram przedstawia logikę systemu — wszystkie stany i przejścia między nimi."
+            viewButton: "View full diagram",
+            description: "The diagram shows system logic — all states and transitions between them."
         },
         projectStats: {
-            codeLines: { value: "~150", label: "Linijek kodu" },
-            developmentTime: { value: "1", label: "Tydzień realizacji" },
-            clientRating: { value: "5/5", label: "Ocena klienta" }
+            codeLines: { value: "~150", label: "Lines of code" },
+            developmentTime: { value: "1", label: "Week of development" },
+            clientRating: { value: "5/5", label: "Client rating" }
         },
-        code: { voltageDetection: "Wykrywanie anomalii napięcia w Node-RED" }
+        code: { voltageDetection: "Voltage anomaly detection in Node-RED" }
     },
     nowadroga: {
-        title: "Strona poradni terapeutycznej",
-        subtitle: "Profesjonalna witryna Poradni Leczenia Uzależnień i Współuzależnień w Barlinku",
-        projectOverview: "Przegląd projektu",
-        projectHistory: "Historia projektu",
-        historyText1: "Klientka potrzebowała nowoczesnej strony prezentującej działalność terapeutyczną w sposób przejrzysty i budujący zaufanie potencjalnych pacjentów.",
-        historyText2: "Po konsultacjach stworzyliśmy witrynę łączącą profesjonalny wygląd z łatwą obsługą i pełną responsywnością na urządzeniach mobilnych.",
-        keyElements: "Kluczowe elementy projektu",
+        title: "Therapy clinic website",
+        subtitle: "Professional website for an addiction and co-dependency treatment center in Barlinek",
+        projectOverview: "Project overview",
+        projectHistory: "Project history",
+        historyText1: "The client needed a modern website that clearly presents therapeutic services and builds trust with potential patients.",
+        historyText2: "After consultations, we built a site combining a professional look with easy navigation and full mobile responsiveness.",
+        keyElements: "Key project elements",
         components: {
-            responsiveDesign: { title: "Responsywny design", desc: "Pełna optymalizacja pod urządzenia mobilne i różne rozdzielczości" },
-            userInterface: { title: "Intuicyjny interfejs", desc: "Prosty układ ułatwiający nawigację" },
-            content: { title: "Treść", desc: "Profesjonalne teksty dopasowane do grupy docelowej" },
-            contactForm: { title: "Formularz kontaktowy", desc: "Prosty kanał komunikacji między pacjentem a poradnią" },
-            seo: { title: "Optymalizacja SEO", desc: "Struktura i meta tagi przyjazne wyszukiwarkom" },
-            fastLoading: { title: "Szybkie ładowanie", desc: "Optymalizacja zasobów dla lepszego UX" }
+            responsiveDesign: { title: "Responsive design", desc: "Full optimization for mobile devices and various screen sizes" },
+            userInterface: { title: "Intuitive interface", desc: "Simple layout for easy navigation" },
+            content: { title: "Content", desc: "Professional copy tailored to the target audience" },
+            contactForm: { title: "Contact form", desc: "Straightforward communication between patients and the clinic" },
+            seo: { title: "SEO optimization", desc: "Structure and meta tags friendly to search engines" },
+            fastLoading: { title: "Fast loading", desc: "Asset optimization for better user experience" }
         },
-        mainFeatures: "Główne funkcje",
+        mainFeatures: "Main features",
         features: {
-            presentation: { title: "Prezentacja oferty", desc: "Przejrzysty opis usług i form terapii." },
-            aboutSection: { title: "Sekcja o terapeucie", desc: "Budowanie zaufania poprzez kwalifikacje i doświadczenie." },
-            contactInfo: { title: "Dane kontaktowe", desc: "Łatwy dostęp do kontaktu i lokalizacji poradni." }
+            presentation: { title: "Service presentation", desc: "Clear overview of clinic services and therapy options." },
+            aboutSection: { title: "About the therapist", desc: "Building trust through qualifications and experience." },
+            contactInfo: { title: "Contact information", desc: "Easy access to contact details and clinic location." }
         },
-        gallery: "Galeria",
+        gallery: "Gallery",
         stats: {
-            codeLines: "Linijek kodu",
-            developmentTime: "Tygodnie realizacji",
-            clientRating: "Ocena klienta"
+            codeLines: "Lines of code",
+            developmentTime: "Weeks of development",
+            clientRating: "Client rating"
         }
     },
     gooseproduction: {
-        title: "Goose Production – pipeline treści",
-        subtitle: "System n8n do agregacji trendów, rankingu tematów i generowania strategii treści wideo",
-        projectOverview: "Przegląd projektu",
-        projectHistory: "O projekcie",
-        historyPart1: "Pipeline produkcji treści wideo oparty na dwóch workflowach n8n. Trend Engine v2 zbiera i normalizuje trendy z Google Trends, YouTube, Google News i Reddit na podstawie słów kluczowych z Google Sheets. Topic Ranking Engine v1 rankuje tematy przez agenta AI i generuje strategię treści (tytuły, miniatury, skrypt) dla najlepszego tematu.",
-        historyPart2: "Dane płyną przez arkusze: raw_topics → ranked_topics → selected_topic. Wyzwalacze: harmonogram (np. co 3 dni) lub ręcznie. Modele AI można wymieniać pod kątem jakości i kosztów.",
+        title: "Goose Production – content pipeline",
+        subtitle: "n8n system for trend aggregation, topic ranking, and video content strategy generation",
+        projectOverview: "Project overview",
+        projectHistory: "About the project",
+        historyPart1: "A video content production pipeline built on two n8n workflows. Trend Engine v2 aggregates and normalizes trends from Google Trends, YouTube, Google News, and Reddit using keywords from Google Sheets. Topic Ranking Engine v1 ranks topics via an AI agent and generates a full content strategy (titles, thumbnails, script) for the best topic.",
+        historyPart2: "Data flows through sheets: raw_topics → ranked_topics → selected_topic. Triggers: schedule (e.g. every 3 days) or manual. AI models can be swapped for quality and cost tuning.",
         trendEngine: "Trend Engine v2",
-        trendEngineDesc: "Odczytuje słowa kluczowe z Google Sheets i uruchamia cztery równoległe gałęzie (Google Trends, YouTube, Google News, Reddit). Każda normalizuje wyniki do wspólnego formatu i zapisuje je w raw_topics. Wyzwalacz: ręczny lub harmonogram.",
+        trendEngineDesc: "Reads keywords from Google Sheets and runs four parallel branches (Google Trends, YouTube, Google News, Reddit). Each branch normalizes results to a common format and writes to raw_topics. Trigger: manual or scheduled.",
         topicRanking: "Topic Ranking Engine v1",
-        topicRankingDesc: "Pobiera nieprzetworzone rekordy z raw_topics, filtruje po świeżości i wyniku. Agent rankingowy zwraca top 20 tematów z ocenami; agent treści generuje strategię wideo i zapisuje wynik w selected_topic.",
-        workflowDiagrams: "Diagramy workflow",
-        dataFlow: "Przepływ danych",
-        dataFlowText: "Słowa kluczowe (Sheets) → Trend Engine → raw_topics → Topic Ranking Engine → ranked_topics → Agent 2 → selected_topic. Stack: n8n, Google Sheets, SerpAPI, YouTube API, Reddit, LLM.",
-        conclusions: "Wnioski",
-        conclusionsText: "Pipeline łączy zbieranie danych z wielu źródeł, normalizację, ranking AI i generowanie strategii treści w jednym systemie n8n ze stanem w Google Sheets.",
-        viewDiagram: "Zobacz pełny diagram"
+        topicRankingDesc: "Fetches unprocessed records from raw_topics, filters by freshness and score. The ranking agent returns the top 20 topics with scores; the content agent generates a video strategy and writes the result to selected_topic.",
+        workflowDiagrams: "Workflow diagrams",
+        dataFlow: "Data flow",
+        dataFlowText: "Keywords (Sheets) → Trend Engine → raw_topics → Topic Ranking Engine → ranked_topics → Agent 2 → selected_topic. Stack: n8n, Google Sheets, SerpAPI, YouTube API, Reddit, LLM.",
+        conclusions: "Conclusions",
+        conclusionsText: "The pipeline combines multi-source data collection, normalization, AI ranking, and content strategy generation in one n8n system with state stored in Google Sheets.",
+        viewDiagram: "View full diagram"
     }
 };
 
@@ -211,7 +211,7 @@ window.getI18n = function (key) {
 window.applyTranslations = function (scope) {
     if (!scope) return;
     var g = function (key) { return window.getI18n(key); };
-    document.documentElement.lang = "pl";
+    document.documentElement.lang = "en";
 
     if (scope === "home") {
         document.querySelectorAll("[data-translate]").forEach(function (el) {
